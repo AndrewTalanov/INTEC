@@ -1,5 +1,49 @@
-// Заголовки, общие БЄМ блоки и проче...
+:root {
+  font-family: 'Montserrat', sans-serif;
+}
 .wrapper {
   width: 87.5%;
   margin: 0 auto;
 }
+
+// кнопки-ссылки (наше меню, подробнее, оставить отзыв и тд)
+.link {
+  padding: 15px 55px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background-color: #EE7700;
+  border-radius: 0 24px 24px 24px;
+}
+.link-alternative {
+  background-color: #fff;
+  color: #82BC00;
+}
+
+// элементы формы
+.input {
+  position: relative;
+  font-size: 14px;
+  color: #585858;
+  &-field {
+    width: 380px;
+    height: 50px;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-weight: 400;
+  }
+  &-label {
+    position: absolute;
+    left: 10px;
+    top: -165%;
+    padding: 0 5px;
+    background: white;
+    font-weight: 600;
+  }
+}
+input:focus {
+  outline: none;
+  border-color: #3a3737;
+}
+
