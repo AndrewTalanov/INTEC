@@ -1,7 +1,12 @@
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
-html, body {
+
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -15,12 +20,51 @@ p {
 :root {
   font-family: 'Montserrat', sans-serif;
 }
+
 .wrapper {
   width: 87.5%;
   margin: 0 auto;
 }
 
+//Цвета
+$green: #82BC00;
+$orange: #EE7700;
+$black:#2F2F2F;
+$white:#FFFFFF;
+$light-white:#FBF8F8;
+
 // кнопки-ссылки (наше меню, подробнее, оставить отзыв и тд)
+.btn-slider-prev,
+.btn-slider-next {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  z-index: 99;
+  transition: 0.3s ease;
+}
+
+.btn-slider-prev {
+  background: url('../img/icons/sl-arrow-left.svg') 0% 50% no-repeat;
+  background-position: center;
+  background-color: $green;
+}
+
+.btn-slider-prev:hover {
+  background-color: #80bc00c9;
+}
+
+.btn-slider-next {
+  background: url('../img/icons/sl-arrow-right.svg') 0% 50% no-repeat;
+  background-position: center;
+  background-color: $orange;
+}
+
+.btn-slider-next:hover {
+  background-color: #E86100;
+}
+
 .link {
   padding: 15px 55px;
   text-decoration: none;
@@ -29,9 +73,10 @@ p {
   background-color: #EE7700;
   border-radius: 0 24px 24px 24px;
 }
+
 .link-alternative {
-  background-color: #fff;
-  color: #82BC00;
+  background-color: $white;
+  color: $green;
 }
 
 // элементы формы
@@ -39,6 +84,7 @@ p {
   position: relative;
   font-size: 14px;
   color: #585858;
+
   &-field {
     width: 380px;
     height: 50px;
@@ -47,15 +93,17 @@ p {
     padding: 0 15px;
     font-weight: 400;
   }
+
   &-label {
     position: absolute;
     left: 10px;
     top: -165%;
     padding: 0 5px;
-    background: white;
+    background: $white;
     font-weight: 600;
   }
 }
+
 input:focus {
   outline: none;
   border-color: #3a3737;
