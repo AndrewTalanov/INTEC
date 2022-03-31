@@ -1,0 +1,77 @@
+.header {
+    height: 137px;
+    display: flex;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+
+            & li {
+                list-style: none;
+                padding: 0 71px 0 71px;
+            }
+        }
+
+        &__link {
+            cursor: pointer;
+            text-decoration: none;
+            /*убираем подчёркивание*/
+        }
+
+        &__link:after {
+            display: block;
+            left: 0; /*изменить на right:0; чтобы изменить направление подчёркивания */     
+            width: 0;
+            height: 3px;
+            background-color: #FF7F22;;
+            content: "";
+            transition: width 0.3s ease-out;
+        }
+        &__link:hover:after
+        {
+            width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+        }
+        &__link:focus:after{
+            width: 100%;
+        }
+    }
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & p {
+            font-weight: 700;
+        }
+
+        & img {
+            padding: 0 10px 0 7px;
+        }
+    }
+
+    &__require {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 14%;
+
+        & a {
+            color: #1F1F1F;
+            font-size: 12px;
+            text-decoration: none;
+            border-bottom: 1px dashed #1F1F1F;
+        }
+    }
+}
