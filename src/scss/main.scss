@@ -1,3 +1,4 @@
+
 .section-main-screen {
   padding: 60px 0 0 0;
   .main-screen {
@@ -69,5 +70,75 @@
       }
     }
   }
-  
+}
+
+.section-popular-dishes {
+  position: relative;
+  padding: 55px 0 0 0;
+  .popular-dishes {
+    &__title {
+      line-height: 29px;
+    }
+    &__description {
+      margin: 15px 0 35px 0;
+    }
+    &__swiper {
+      margin: 60px 0 0 0;
+      width: 100%;
+      background: right top / auto auto url("img/content/BG.png") no-repeat;
+      &-prev, &-next {
+        position: absolute;
+        bottom: 1%;
+        right: 17%;
+      }
+      &-prev {
+        right: 35%;
+      }
+      .swiper-wrapper {
+        padding: 0 0 30px 0;
+        .swiper-slide {
+          padding: 10px 0 0 0;
+          img {
+            width: 100%;
+          }
+          .content-wrapper {
+            margin-top: 23px;
+            box-shadow: 0px 3px 40px rgba(0, 0, 0, 0.11);
+            border-radius: 0 30px 30px 30px;
+            padding: 36px 0 28px 0;
+            .content-inner {
+              margin: 0 0 0 36px;
+              &__title {
+                h3 {
+                  font-size: 16px;
+                }
+              }
+              &__description {
+                p {
+                  font-size: 14px;
+                  margin: 10px 0;
+                }
+              }
+              &__price {
+                margin: 13px 0;
+                p {
+                  color: $orange;
+                }
+              }
+              &__link {
+                a {
+                  font-size: 14px;
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-menu-dishes {
+  padding: 100px 0 0 0;
 }

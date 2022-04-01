@@ -21,11 +21,13 @@ a{
   font-weight: 500;
   line-height: 149.4%;
   color: #181818;
+  text-decoration: none;
 }
 
 
 :root {
   font-family: 'Montserrat', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .wrapper {
@@ -118,5 +120,5 @@ input:focus {
 
 // фон
 body {
-  background: 0 0 / cover no-repeat url("img/content/back2-mobile.png"), 0 0 / cover no-repeat url("img/content/back1-mobile.png");
+  background: 0 0 / 100% auto url("img/content/back2-mobile.png") no-repeat, 0 0 / 100% auto url("img/content/back1-mobile.png") no-repeat;
 }
