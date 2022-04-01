@@ -1,44 +1,58 @@
 .header {
+    @media (max-width: 768px) {
+        height: 80px;
+    }
+
     height: 137px;
     display: flex;
 
     &__container {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-
+    &__logo img {
+        max-width: 100%;
+    }
     .menu {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+
+        &__body {
+            width: 100%;
+            display: flex;
+        }
+
         &__list {
             display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0;
 
             & li {
                 list-style: none;
-                padding: 0 71px 0 71px;
             }
         }
 
         &__link {
             cursor: pointer;
             text-decoration: none;
-            /*убираем подчёркивание*/
-        }
-
-        &__link:after {
-            display: block;
-            left: 0; /*изменить на right:0; чтобы изменить направление подчёркивания */     
-            width: 0;
-            height: 3px;
-            background-color: #FF7F22;;
-            content: "";
-            transition: width 0.3s ease-out;
-        }
-        &__link:hover:after
-        {
-            width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
-        }
-        &__link:focus:after{
-            width: 100%;
+            &::after {
+                position: relative;
+                display: block;
+                right: 0%;
+                width: 0%;
+                height: 3px;
+                background-color: #ff7f22;
+                content: "";
+                transition: 0.3s;
+            }
+            &:hover::after {
+                right: 0%;
+                width: 100%;
+            }
         }
     }
 }
@@ -68,10 +82,10 @@
         margin-right: 14%;
 
         & a {
-            color: #1F1F1F;
+            color: #1f1f1f;
             font-size: 12px;
             text-decoration: none;
-            border-bottom: 1px dashed #1F1F1F;
+            border-bottom: 1px dashed #1f1f1f;
         }
     }
 }
