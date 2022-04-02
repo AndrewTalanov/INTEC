@@ -4,7 +4,7 @@
 	"title":"Доставка еды"
 })
 <body>
-	@@include('html/_header.htm',{})
+	<!-- @@include('html/_header.htm',{}) -->
 	<main>
 		
 		<section class="section-main-screen">
@@ -60,14 +60,151 @@
 		</section>
 
 		<section class="section-popular-dishes">
-			<div class="wrapper">
-
+			<div class="wrapper popular-dishes">
+				<div class="popular-dishes__title">
+					<h2>Популярные <br> блюда</h2>
+				</div>
+				<div class="popular-dishes__description">
+					<p>Изобилие готовых и вкусных блюд, предлагаемых нашей компанией, позволяет удовлетворить любые потребности в еде.</p>
+				</div>
+				<a href="#" class="link">Подробне</a>
 			</div>
+			<div class="swiper popular-dishes__swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/content/slide2.1.png" alt="картинка слайдера">
+						<div class="wrapper content-wrapper">
+							<div class="content-inner">
+								<div class="content-inner__title">
+									<h3>Курица в соусе терияки</h3>
+								</div>
+								<div class="content-inner__description">
+									<p>куриная грудка, сыр, шампиньоны, майонез</p>
+								</div>
+								<div class="content-inner__price">
+									<p>281 ₽</p>
+								</div>
+								<div class="content-inner__link">
+									<a href="#">Подробнее <img src="img/icons/arrow-dropdown.svg" alt="¯\_(ツ)_/¯"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/content/slide2.2.png" alt="картинка слайдера">
+						<div class="wrapper content-wrapper">
+							<div class="content-inner">
+								<div class="content-inner__title">
+									<h3>Салат летний</h3>
+								</div>
+								<div class="content-inner__description">
+									<p>куриная грудка, сыр, шампиньоны, майонез</p>
+								</div>
+								<div class="content-inner__price">
+									<p>282 ₽</p>
+								</div>
+								<div class="content-inner__link">
+									<a href="#">Подробнее <img src="img/icons/arrow-dropdown.svg" alt="¯\_(ツ)_/¯"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/content/slide2.3.png" alt="картинка слайдера">
+						<div class="wrapper content-wrapper">
+							<div class="content-inner">
+								<div class="content-inner__title">
+									<h3>Тыквенный крем-суп</h3>
+								</div>
+								<div class="content-inner__description">
+									<p>куриная грудка, сыр, шампиньоны, майонез</p>
+								</div>
+								<div class="content-inner__price">
+									<p>283 ₽</p>
+								</div>
+								<div class="content-inner__link">
+									<a href="#">Подробнее <img src="img/icons/arrow-dropdown.svg" alt="¯\_(ツ)_/¯"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/content/slide2.1.png" alt="картинка слайдера">
+						<div class="wrapper content-wrapper">
+							<div class="content-inner">
+								<div class="content-inner__title">
+									<h3>Тыквенный крем-суп</h3>
+								</div>
+								<div class="content-inner__description">
+									<p>куриная грудка, сыр, шампиньоны, майонез</p>
+								</div>
+								<div class="content-inner__price">
+									<p>284 ₽</p>
+								</div>
+								<div class="content-inner__link">
+									<a href="#">Подробнее <img src="img/icons/arrow-dropdown.svg" alt="¯\_(ツ)_/¯"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/content/slide2.2.png" alt="картинка слайдера">
+						<div class="wrapper content-wrapper">
+							<div class="content-inner">
+								<div class="content-inner__title">
+									<h3>Тыквенный крем-суп</h3>
+								</div>
+								<div class="content-inner__description">
+									<p>куриная грудка, сыр, шампиньоны, майонез</p>
+								</div>
+								<div class="content-inner__price">
+									<p>285 ₽</p>
+								</div>
+								<div class="content-inner__link">
+									<a href="#">Подробнее <img src="img/icons/arrow-dropdown.svg" alt="¯\_(ツ)_/¯"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<img src="img/content/slide2.3.png" alt="картинка слайдера">
+						<div class="wrapper content-wrapper">
+							<div class="content-inner">
+								<div class="content-inner__title">
+									<h3>Тыквенный крем-суп</h3>
+								</div>
+								<div class="content-inner__description">
+									<p>куриная грудка, сыр, шампиньоны, майонез</p>
+								</div>
+								<div class="content-inner__price">
+									<p>286 ₽</p>
+								</div>
+								<div class="content-inner__link">
+									<a href="#">Подробнее <img src="img/icons/arrow-dropdown.svg" alt="¯\_(ツ)_/¯"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popular-dishes__swiper-pagination">
+				<img src="img/content/ellipse.png" alt="Полоска, на которой точки пагинации">
+				<div class="dots">
+					<div class="dot1 dots-item active"></div>
+					<div class="dot2 dots-item"></div>
+					<div class="dot3 dots-item"></div>
+					<div class="dot4 dots-item"></div>
+					<div class="dot5 dots-item"></div>
+					<div class="dot6 dots-item"></div>
+				</div>
+			</div>
+			<div class="btn-slider-prev popular-dishes__swiper-prev"></div>
+			<div class="btn-slider-next popular-dishes__swiper-next"></div>
 		</section>
 
 		<section class="section-menu-dishes">
 			<div class="wrapper">
-
+				
 			</div>
 		</section>
 
