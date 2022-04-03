@@ -70,6 +70,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"imask": "^6.4.2",
 		"simplebar": "latest"
 	}
 }

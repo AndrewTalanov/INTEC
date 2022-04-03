@@ -198,5 +198,113 @@
 }
 
 .section-menu-dishes {
-  padding: 100px 0 0 0;
+  color: white;
+  // блок со слайдером в табах
 }
+
+.section-about-company {
+  padding: 95px 0 0 0;
+  .about-company {
+    &__preview {
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      margin-top: 25px;
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+    &__description {
+      margin: 12px 0 35px 0;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.section-form-call {
+  margin-top: 55px;
+  padding: 46px 0;
+  background: 0 0 / cover url('img/content/back3.png') no-repeat;
+  .wrapper {
+    .form-call {
+      background-color: white;
+      border-radius: 25px;
+      &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0;
+        margin: 0 20px;
+        text-align: center;
+      }
+      &__title {
+        h2 {
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+      &__description {
+        margin: 13px 0 15px 0;
+        p {
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+      .input {
+        margin-top: 15px;
+      }
+      .link {
+        margin: 20px 0;
+        border: none;
+      }
+      &__conf {
+        font-weight: 500;
+        font-size: 11px;
+        span {
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.section-feedback {
+  background: 0 0 / cover url('img/content/back4.png') no-repeat;
+  padding: 100px 0;
+  position: relative;
+  img {
+    top: -10%;
+    left: 5%;
+    position: absolute;
+    width: 110px;
+  }
+  .feedback {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      h2 {
+        color: white;
+        line-height: 29px;
+      }
+    }
+    &__description {
+      margin: 10px 0 20px 0;
+      p {
+        color: white;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+

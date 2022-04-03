@@ -1,5 +1,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+// маска для телефона
+import IMask from 'imask';
 // стили
 import "../scss/style.scss";
 
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Интересно, что произойдет при адаптации всего этого дела (надеюсь ничего (страшного) (в теории и не должно))
   let prevSlide;
   let prevPos;
-  
+
   secondSwiper.on('transitionEnd', function () {
 
     // получили активный слайд и значение его left без px 
@@ -66,7 +68,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     slide.style.left = pos - 1 + 'px';
   });
   
-
+  // маска для номера телефона
+  phoneMask = IMask(
+    document.getElementById('phone-mask'), {
+      mask: '+{7} (000) 000-00-00'
+  });
 
 })
 
