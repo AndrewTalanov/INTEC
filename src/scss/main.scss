@@ -48,7 +48,7 @@
             align-items: center;
             width: 80%;
             top: -50px;
-            background-color: #fff;
+            background-color: $white;
             padding: 7px 10px;
             border-radius: 5px;
             text-decoration: none;
@@ -85,7 +85,7 @@
     &__swiper {
       margin: 60px 0 0 0;
       width: 100%;
-      background: right top / auto auto url("img/content/BG.png") no-repeat;
+      background: right top / 70% 55% url("img/content/BG.png") no-repeat;
       &-prev, &-next {
         position: absolute;
         bottom: 1%;
@@ -93,6 +93,57 @@
       }
       &-prev {
         right: 35%;
+      }
+      &-pagination {
+        pointer-events: none;
+        z-index: 1;
+        position: absolute;
+        top: 360px;
+        right: 6%;
+        img {
+          width: 100px;
+        }
+        .dots {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          div {
+            position: relative;
+            width: 5px;
+            height: 5px;
+            background-color: $white;
+            border-radius: 30px;
+            transition: 0.2s;
+          }
+          .active {
+            width: 8px;
+            height: 8px;
+          }
+          .dot1 {
+            top: 40px;
+            left: 52px;
+          }
+          .dot2 {
+            top: 80px;
+            left: 79px;
+          }
+          .dot3 {
+            top: 125px;
+            left: 94px;
+          }
+          .dot4 {
+            top: 190px;
+            left: 94px;
+          }
+          .dot5 {
+            top: 240px;
+            left: 76px;
+          }
+          .dot6 {
+            top: 275px;
+            left: 50px;
+          }
+        }
       }
       .swiper-wrapper {
         padding: 0 0 30px 0;
@@ -114,13 +165,14 @@
                 }
               }
               &__description {
+                width: 80%;
                 p {
                   font-size: 14px;
                   margin: 10px 0;
                 }
               }
               &__price {
-                margin: 13px 0;
+                margin: 10px 0;
                 p {
                   color: $orange;
                 }
@@ -129,6 +181,12 @@
                 a {
                   font-size: 14px;
                   color: $black;
+                  font-weight: 600;
+                  img {
+                    width: 10px;
+                    height: 9px;
+                    transform: rotate(-90deg);
+                  }
                 }
               }
             }
@@ -140,5 +198,113 @@
 }
 
 .section-menu-dishes {
-  padding: 100px 0 0 0;
+  color: white;
+  // блок со слайдером в табах
 }
+
+.section-about-company {
+  padding: 95px 0 0 0;
+  .about-company {
+    &__preview {
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      margin-top: 25px;
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+    &__description {
+      margin: 12px 0 35px 0;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.section-form-call {
+  margin-top: 55px;
+  padding: 46px 0;
+  background: 0 0 / cover url('img/content/back3.png') no-repeat;
+  .wrapper {
+    .form-call {
+      background-color: white;
+      border-radius: 25px;
+      &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0;
+        margin: 0 20px;
+        text-align: center;
+      }
+      &__title {
+        h2 {
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+      &__description {
+        margin: 13px 0 15px 0;
+        p {
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+      .input {
+        margin-top: 15px;
+      }
+      .link {
+        margin: 20px 0;
+        border: none;
+      }
+      &__conf {
+        font-weight: 500;
+        font-size: 11px;
+        span {
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.section-feedback {
+  background: 0 0 / cover url('img/content/back4.png') no-repeat;
+  padding: 100px 0;
+  position: relative;
+  img {
+    top: -10%;
+    left: 5%;
+    position: absolute;
+    width: 110px;
+  }
+  .feedback {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      h2 {
+        color: white;
+        line-height: 29px;
+      }
+    }
+    &__description {
+      margin: 10px 0 20px 0;
+      p {
+        color: white;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+
