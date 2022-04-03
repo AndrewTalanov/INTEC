@@ -17,7 +17,8 @@ p {
   line-height: 149.4%;
   font-size: 16px;
 }
-a{
+
+a {
   font-weight: 500;
   line-height: 149.4%;
   color: #181818;
@@ -41,6 +42,17 @@ $orange: #EE7700;
 $black:#2F2F2F;
 $white:#FFFFFF;
 $light-white:#FBF8F8;
+
+//Переменные для адаптива
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media(max-width: 768px) {@content;}
+  }
+  @else if $point == xs{
+    @media(max-width: 320px) {@content;}
+  }
+}
+
 
 // кнопки-ссылки (наше меню, подробнее, оставить отзыв и тд)
 .btn-slider-prev,
@@ -120,5 +132,6 @@ input:focus {
 
 // фон
 body {
-  background: 0 0 / 100% auto url("img/content/back2-mobile.png") no-repeat, 0 0 / 100% auto url("img/content/back1-mobile.png") no-repeat;
+  background: 0 0 / 100% auto url("img/content/back2-mobile.png") no-repeat,
+    0 0 / 100% auto url("img/content/back1-mobile.png") no-repeat;
 }
