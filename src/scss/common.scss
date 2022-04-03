@@ -45,11 +45,16 @@ $light-white:#FBF8F8;
 
 //Переменные для адаптива
 @mixin breakpoint($point) {
-  @if $point == md {
-    @media(max-width: 768px) {@content;}
+  @if $point==md {
+    @media(max-width: 768px) {
+      @content;
+    }
   }
-  @else if $point == xs{
-    @media(max-width: 320px) {@content;}
+
+  @else if $point==xs {
+    @media(max-width: 320px) {
+      @content;
+    }
   }
 }
 
@@ -106,6 +111,7 @@ $light-white:#FBF8F8;
   font-size: 14px;
   color: #585858;
   width: 100%;
+
   &-field {
     width: 90%;
     height: 50px;

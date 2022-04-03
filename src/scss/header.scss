@@ -1,5 +1,5 @@
 .header {
-    height: 137px;
+    // height: 137px; для декстопа размер
     display: flex;
 
     @include breakpoint (md) {
@@ -38,20 +38,22 @@
             display: flex;
 
             @include breakpoint (md) {
-                position: absolute;
+                position: fixed;
                 height: 100%;
                 top: 0;
                 left: 0;
                 width: 100%;
                 background: $white;
                 transform: translateY(-100%);
-
                 transition: transform 0.5s;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
 
                 &.active {
                     transform: translateX(0);
-                    z-index: 98;
-                    overflow: hidden;
+                    z-index: 995;
+
                 }
             }
         }
@@ -63,12 +65,16 @@
 
             & li {
                 list-style: none;
+                padding: 0 0 0.75em 0;
             }
 
             @include breakpoint (md) {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+                font-size: 1.5em;
+                top: 1em;
             }
         }
 
@@ -99,7 +105,7 @@
                 width: 30px;
                 height: 30px;
                 position: relative;
-                z-index: 99;
+                z-index: 999;
 
                 span,
                 &:before,
@@ -128,6 +134,8 @@
 
                 &.active {
                     & span {
+                        overflow: hidden;
+
                         &:nth-of-type(1) {
                             opacity: 0;
                             transition: 0.3s ease;
@@ -146,43 +154,52 @@
                 }
             }
         }
-    }
-}
 
-.phone {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+        &__phone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    @include breakpoint (md) {
-        display: none;
-    }
+            @include breakpoint (md) {
+                display: block;
+            }
 
-    &__number {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+            &__number {
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-        & p {
-            font-weight: 700;
-        }
+                & p {
+                    font-weight: 700;
+                }
 
-        & img {
-            padding: 0 10px 0 7px;
-        }
-    }
+                & img {
+                    padding: 0 10px 0 7px;
+                }
+            }
 
-    &__require {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-right: 14%;
+            &__require {
+                display: flex;
+                justify-content: center;
+                padding: 0.6250em 0 0 0;
 
-        & a {
-            color: #1f1f1f;
-            font-size: 12px;
-            text-decoration: none;
-            border-bottom: 1px dashed #1f1f1f;
+                // & a {
+                //     color: #1f1f1f;
+                //     font-size: 12px;
+                //     text-decoration: none;
+                //     border-bottom: 1px dashed #1f1f1f;
+                // }   
+                .link {
+                    border-radius: 24px;
+                    padding: 0.93em 2.4em;
+
+                    &:active {
+                        transition: 0.3s ease;
+                        background-color: #bb5b15
+                    }
+                }
+            }
+
         }
     }
 }

@@ -9,7 +9,7 @@ import "../scss/style.scss";
 import * as webp from "./files/webp.js";
 webp.isWebp();
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
   // СЛАЙДЕР В НАЧАЛЕ (первый)
   new Swiper('.main-screen__swiper', {
@@ -67,19 +67,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // и вот собственно сама суть
     slide.style.left = pos - 1 + 'px';
   });
-  
+
   // маска для номера телефона
   phoneMask = IMask(
     document.getElementById('phone-mask'), {
       mask: '+{7} (000) 000-00-00'
-  });
-
+    });
 });
 
 //Бургер меню
 let menuBtn = document.querySelector('.menu__icon');
 let menu = document.querySelector('.menu__body');
-menuBtn.addEventListener('click', function(){
-	menuBtn.classList.toggle('active');
-	menu.classList.toggle('active');
+menuBtn.addEventListener('click', function () {
+  menuBtn.classList.toggle('active');
+  menu.classList.toggle('active');
 });
