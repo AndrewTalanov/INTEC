@@ -353,40 +353,78 @@
           cursor: pointer;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
           padding: 27px;
           box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.04);
-          background-color: $white;
+          // background-color: $white;
+          background-color: rgb(255, 255, 255);
           border-radius: 0px 33px 33px 33px;
           min-width: 70%;
           height: 224px;
+          transition: 1s;
 
-          & img {
+          // & img {
+          //   max-width: 32px;
+          //   max-height: 35px;
+          //   fill: green;
+          // }
+          & svg {
             max-width: 32px;
             max-height: 35px;
+
+            path {
+              transition: 1.5s;
+              fill: $black;
+            }
           }
 
+          p,
+          h3 {
+            transition: 2s;
+            color: $black;
+          }
+          h3 {
+            margin: 14px 0 10px 0;
+          }
           & p {
             font-size: 14px;
             font-weight: 400;
+            // margin-bottom: 35px;
+
           }
 
           &__link {
-            display: none;
+            transition: 1s;
+            // display: none;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+
           }
 
           &:hover {
-            transition-duration: 1s;
             height: 264px;
             background-color: $orange;
+
+            & svg {
+              path {
+                fill: $white;
+              }
+            }
 
             p,
             h3 {
               color: $white;
             }
+            p {
+              transition: 0.5s;
+              margin-bottom: 35px;
+            }
 
             .tab__link {
-              display: block;
+              height: auto;
+              opacity: 1;
+              visibility: visible;
+              // display: block;
               color: $white;
               display: flex;
               align-items: center;
