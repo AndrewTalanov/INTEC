@@ -521,3 +521,47 @@
     }
   }
 }
+
+.section-interesting-articles {
+  margin-top: 3.75em;
+  
+  .interesting-articles {
+    &__title {
+      text-align: center;
+    }
+
+    &__container {
+      margin-top: 1.3125em;
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-between;
+      .item {
+        &__link {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          &__bg {
+            position: absolute;
+            border-radius: 10px;
+          }
+
+          &__text {
+            position: relative;
+            // padding: 24px 34px 35px 20px;
+            & p,
+            h3 {
+              color: $white;
+            }
+
+            h3 {
+              // padding-top: 8px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
