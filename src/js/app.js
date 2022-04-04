@@ -71,14 +71,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // маска для номера телефона
   phoneMask = IMask(
     document.getElementById('phone-mask'), {
-      mask: '+{7} (000) 000-00-00'
-    });
+    mask: '+{7} (000) 000-00-00'
+  });
 });
 
 //Бургер меню
 let menuBtn = document.querySelector('.menu__icon');
 let menu = document.querySelector('.menu__body');
+
 menuBtn.addEventListener('click', function () {
   menuBtn.classList.toggle('active');
   menu.classList.toggle('active');
+
+  if (document.body.style.overflow != 'hidden') {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
 });
