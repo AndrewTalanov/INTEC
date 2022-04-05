@@ -353,20 +353,15 @@
           cursor: pointer;
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
           padding: 27px;
           box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.04);
-          // background-color: $white;
-          background-color: rgb(255, 255, 255);
+          background-color: $white;
           border-radius: 0px 33px 33px 33px;
           min-width: 70%;
           height: 224px;
           transition: 1s;
 
-          // & img {
-          //   max-width: 32px;
-          //   max-height: 35px;
-          //   fill: green;
-          // }
           & svg {
             max-width: 32px;
             max-height: 35px;
@@ -382,14 +377,21 @@
             transition: 2s;
             color: $black;
           }
+
           h3 {
             margin: 14px 0 10px 0;
           }
+
           & p {
             font-size: 14px;
             font-weight: 400;
             // margin-bottom: 35px;
 
+          }
+
+          & p {
+            font-size: 14px;
+            font-weight: 400;
           }
 
           &__link {
@@ -402,6 +404,7 @@
           }
 
           &:hover {
+            transition-duration: 1s;
             height: 264px;
             background-color: $orange;
 
@@ -415,6 +418,7 @@
             h3 {
               color: $white;
             }
+
             p {
               transition: 0.5s;
               margin-bottom: 35px;
@@ -560,44 +564,82 @@
   }
 }
 
+//НАДО ПРИВЕСТИ В АДЕКВАТНЫЙ ВИД ЭТО ВСЕ
 .section-interesting-articles {
   margin-top: 3.75em;
-  
+
   .interesting-articles {
     &__title {
       text-align: center;
     }
 
-    &__container {
-      margin-top: 1.3125em;
+    &__cards {
+      margin-top: 1.4375em;
       display: flex;
       flex-direction: column;
-      height: 200px;
+      align-items: center;
       justify-content: space-between;
-      .item {
-        &__link {
+      height: 150px;
+
+      .blog-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 280px;
+        height: 132px;
+
+        &.bg-1 {
+          background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('img/content/articles-item-bg1.png');
+          border-radius: 10px;
+        }
+
+        &.bg-2 {
+          background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('img/content/articles-item-bg2.png');
+          border-radius: 10px;
+        }
+
+        &.bg-3 {
+          background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('img/content/articles-item-bg3.png');
+          border-radius: 10px;
+        }
+
+        &.bg-4 {
+          background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('img/content/articles-item-bg4.png');
+          border-radius: 10px;
+        }
+
+        .card-content {
+          padding: 24px 34px 29px 20px;
           display: flex;
-          align-items: center;
           flex-direction: column;
+          justify-content: center;
+          position: relative;
+          height: 100%;
 
-          &__bg {
-            position: absolute;
-            border-radius: 10px;
+          & p,
+          h3 {
+            color: $white;
           }
 
-          &__text {
-            position: relative;
-            // padding: 24px 34px 35px 20px;
-            & p,
-            h3 {
-              color: $white;
-            }
-
-            h3 {
-              // padding-top: 8px;
-              font-weight: 700;
-            }
+          & h3 {
+            padding-top: 8px;
           }
+        }
+      }
+    }
+
+    &__all-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & a {
+        display: flex;
+        font-weight: 700;
+        font-size: 18px;
+
+        & img {
+          padding-left: 9px;
         }
       }
     }
