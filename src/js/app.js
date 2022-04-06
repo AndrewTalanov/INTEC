@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // получили активный слайд и значение его left без px 
     let slide = paginationDots[secondSwiper.realIndex];
-    let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
+    // let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
 
     // удалили у всех (на всякий случай) элементов класс активности и добавили его только тому, кому надо
     paginationDots.forEach(item => {
@@ -57,15 +57,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     slide.classList.add('active');
 
     // Предыдущий слайд - если имеет какое либо значение, то установить этому слайду предыдущую позицию
-    if (prevSlide) {
-      prevSlide.style.left = prevPos + 'px';
-    }
+    // if (prevSlide) {
+    //   prevSlide.style.left = prevPos + 'px';
+    // }
 
-    prevSlide = slide;
-    prevPos = pos;
+    // prevSlide = slide;
+    // prevPos = pos;
 
     // и вот собственно сама суть
-    slide.style.left = pos - 1 + 'px';
+    // slide.style.left = pos - 1 + 'px';
   });
 
   // маска для номера телефона
