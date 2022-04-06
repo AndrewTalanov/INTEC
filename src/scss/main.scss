@@ -316,7 +316,6 @@
 
       .link {
         margin: 20px 0;
-        border: none;
       }
 
       &__conf {
@@ -555,6 +554,144 @@
         color: white;
         font-weight: 400;
         line-height: 25px;
+      }
+    }
+  }
+}
+
+//НАДО ПРИВЕСТИ В АДЕКВАТНЫЙ ВИД ЭТО ВСЕ
+.section-interesting-articles {
+  margin-top: 3.75em;
+
+  .interesting-articles {
+    &__title {
+      text-align: center;
+    }
+
+    &__cards {
+      margin-top: 1.4375em;
+      height: 150px;
+
+      .blog-card {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+
+        min-width: 100%;
+        min-height: 132px;
+
+        &.bg-1 {
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg1.png');
+          border-radius: 10px;
+        }
+
+        &.bg-2 {
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg2.png');
+          border-radius: 10px;
+        }
+
+        &.bg-3 {
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg3.png');
+          border-radius: 10px;
+        }
+
+        &.bg-4 {
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg4.png');
+          border-radius: 10px;
+        }
+
+        .card-content {
+          padding: 24px 34px 29px 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          height: 100%;
+
+          & p,
+          h3 {
+            color: $white;
+
+          }
+
+          & h3 {
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+
+    &__all-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & a {
+        display: flex;
+        font-weight: 700;
+        font-size: 18px;
+
+        & img {
+          padding-left: 9px;
+        }
+      }
+    }
+  }
+}
+
+.section-calculator {
+  margin-top: 65px;
+  position: relative;
+  background: rgba($color: #000000, $alpha: .28);
+  .test-back {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+  }
+  .calculator {
+    padding: 70px 0 50px 0;
+    h2, p {
+      color: white;
+    }
+    &__title {
+      h2 {
+        font-weight: 800;
+        font-size: 24px;
+      }
+    }
+    &__description {
+      margin-top: 20px;
+      p {
+        width: 90%;
+        line-height: 25px;
+        font-weight: 400;
+      }
+    }
+    &__form {
+      margin-top: 20px;
+      .input {
+        margin-top: 15px;
+        &-alt {
+          border: 1px solid #FFFFFF;
+          background-color: #000000;
+          color: #A2A5AF;
+        }
+        &-label {
+          background-color: #000000;
+          color: white;
+        }
+        &-date {
+          width: 40%;
+          font-size: 14px;
+        }
+        &-select {
+          color: #FFFFFF;
+          width: 70%;
+          
+        }
+      }
+      .link {
+        margin-top: 25px;
       }
     }
   }
