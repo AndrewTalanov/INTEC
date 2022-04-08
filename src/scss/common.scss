@@ -25,7 +25,18 @@ a {
   text-decoration: none;
 }
 
+button{
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  // & :hover{
+  //   transition: 0.3s;
+  //   background-color: $dark-orange;
+  // }
 
+}
+textarea {
+  font-family: 'Montserrat', sans-serif;
+}
 :root {
   font-family: 'Montserrat', sans-serif;
   -webkit-tap-highlight-color: transparent;
@@ -39,6 +50,7 @@ a {
 //Цвета
 $green: #82BC00;
 $orange: #EE7700;
+$dark-orange:#E86100;
 $black:#2F2F2F;
 $white:#FFFFFF;
 $light-white:#FBF8F8;
@@ -88,7 +100,7 @@ $light-white:#FBF8F8;
 }
 
 .btn-slider-next:hover {
-  background-color: #E86100;
+  background-color: $dark-orange;
 }
 
 .link {
@@ -96,12 +108,14 @@ $light-white:#FBF8F8;
   text-decoration: none;
   color: white;
   font-weight: 600;
-  background-color: #EE7700;
+  background-color: $orange;
   border-radius: 0 24px 24px 24px;
+  border:none;
+  
 }
 
 .link-alternative {
-  background-color: white;
+  background-color: $white;
   color: $green;
 }
 

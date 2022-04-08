@@ -71,8 +71,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // маска для номера телефона
   phoneMask = IMask(
     document.getElementById('phone-mask'), {
-    mask: '+{7} (000) 000-00-00'
-  });
+      mask: '+{7} (000) 000-00-00'
+    });
+
+
 });
 
 //Бургер меню
@@ -88,5 +90,63 @@ menuBtn.addEventListener('click', function () {
   } else {
     document.body.style.overflow = 'unset';
   }
-
 });
+
+
+// const popupLinks = document.querySelectorAll('.popup-link');
+// const body = document.querySelector('body');
+
+// setTimeout = 800;
+// let unlock = true;
+
+
+// let index = 0;
+
+// if (popupLinks.length > 0) { //Проверка на то, существует ли ссылка 
+//   for (; index < popupLinks.length; index++) {
+//     const popupLink = popupLinks[index];
+//     popupLink.addEventListener("click", function (e) {
+//       const popupName = popupLink.getElementById('href').replace('#', '');
+//       const curentPopup = document.getElementById(popupName);
+//       popupOpen(curentPopup);
+//       e.preventDefault();
+//     });
+//   }
+// }
+
+// //Закрытие модального окна
+// const popupCloseiIcon = document.querySelectorAll('.close-popup');
+
+// if (popupLinks.length > 0) {
+//   for (; index < popupCloseiIcon.length; index++) {
+//     const el = popupCloseiIcon[index];
+//     el.addEventListener("click", function (e) {
+//       popupClose(el.closest('.popup')); // обьект который является ближайшем родителем ссылка с классом popup
+//       e.preventDefault();
+//     });
+//   }
+// }
+
+// function popupOpen(curentPopup) {
+//   if (curentPopup && unlock) {
+//     const popupActive = document.querySelector('.open');
+//     if (popupActive) {
+//       popupClose(popupActive, false);
+//     } else bodyLock();
+//     curentPopup.classList.add('open');
+//     curentPopup.addEventListener("click", function (e) {
+//       if (!e.target.closest('.popup__content')) {
+//         popupClose(e.target.closest('.popup'));
+//       }
+//     });
+//   }
+// }
+
+// function popupClose(popupActive, doUnlock = true) {
+//     if(unlock){
+//       popupActive.classList.remove('open');
+//       if(doUnlock){
+//         bodyUnLock();
+//       }
+//     }
+// }
