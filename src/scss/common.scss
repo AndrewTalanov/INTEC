@@ -5,7 +5,9 @@ p {
   margin: 0;
   color: #2F2F2F;
 }
-
+html {
+  min-width: 320px;
+}
 html,
 body {
   margin: 0;
@@ -84,7 +86,7 @@ $light-white:#FBF8F8;
 }
 
 .btn-slider-prev {
-  background: url('../img/icons/sl-arrow-left.svg') 0% 50% no-repeat;
+  background: url('@img/icons/sl-arrow-left.svg') 0% 50% no-repeat;
   background-position: center;
   background-color: $green;
 }
@@ -94,7 +96,7 @@ $light-white:#FBF8F8;
 }
 
 .btn-slider-next {
-  background: url('../img/icons/sl-arrow-right.svg') 0% 50% no-repeat;
+  background: url('@img/icons/sl-arrow-right.svg') 0% 50% no-repeat;
   background-position: center;
   background-color: $orange;
 }
@@ -110,8 +112,12 @@ $light-white:#FBF8F8;
   font-weight: 600;
   background-color: $orange;
   border-radius: 0 24px 24px 24px;
+<<<<<<< HEAD
   border:none;
   
+=======
+  border: none;
+>>>>>>> 3a4a738721fdbf4d59aea690ad406039f6fe0a1e
 }
 
 .link-alternative {
@@ -152,6 +158,6 @@ input:focus {
 
 // фон
 body {
-  background: 0 0 / 100% auto url("img/content/back2-mobile.png") no-repeat,
-    0 0 / 100% auto url("img/content/back1-mobile.png") no-repeat;
+  background: 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
+    0 0 / 100% auto url("@img/content/back1-mobile.png") no-repeat;
 }

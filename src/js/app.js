@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // получили активный слайд и значение его left без px 
     let slide = paginationDots[secondSwiper.realIndex];
-    let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
+    // let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
 
     // удалили у всех (на всякий случай) элементов класс активности и добавили его только тому, кому надо
     paginationDots.forEach(item => {
@@ -57,15 +57,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     slide.classList.add('active');
 
     // Предыдущий слайд - если имеет какое либо значение, то установить этому слайду предыдущую позицию
-    if (prevSlide) {
-      prevSlide.style.left = prevPos + 'px';
-    }
+    // if (prevSlide) {
+    //   prevSlide.style.left = prevPos + 'px';
+    // }
 
-    prevSlide = slide;
-    prevPos = pos;
+    // prevSlide = slide;
+    // prevPos = pos;
 
     // и вот собственно сама суть
-    slide.style.left = pos - 1 + 'px';
+    // slide.style.left = pos - 1 + 'px';
   });
 
   // маска для номера телефона
@@ -93,60 +93,3 @@ menuBtn.addEventListener('click', function () {
 });
 
 
-// const popupLinks = document.querySelectorAll('.popup-link');
-// const body = document.querySelector('body');
-
-// setTimeout = 800;
-// let unlock = true;
-
-
-// let index = 0;
-
-// if (popupLinks.length > 0) { //Проверка на то, существует ли ссылка 
-//   for (; index < popupLinks.length; index++) {
-//     const popupLink = popupLinks[index];
-//     popupLink.addEventListener("click", function (e) {
-//       const popupName = popupLink.getElementById('href').replace('#', '');
-//       const curentPopup = document.getElementById(popupName);
-//       popupOpen(curentPopup);
-//       e.preventDefault();
-//     });
-//   }
-// }
-
-// //Закрытие модального окна
-// const popupCloseiIcon = document.querySelectorAll('.close-popup');
-
-// if (popupLinks.length > 0) {
-//   for (; index < popupCloseiIcon.length; index++) {
-//     const el = popupCloseiIcon[index];
-//     el.addEventListener("click", function (e) {
-//       popupClose(el.closest('.popup')); // обьект который является ближайшем родителем ссылка с классом popup
-//       e.preventDefault();
-//     });
-//   }
-// }
-
-// function popupOpen(curentPopup) {
-//   if (curentPopup && unlock) {
-//     const popupActive = document.querySelector('.open');
-//     if (popupActive) {
-//       popupClose(popupActive, false);
-//     } else bodyLock();
-//     curentPopup.classList.add('open');
-//     curentPopup.addEventListener("click", function (e) {
-//       if (!e.target.closest('.popup__content')) {
-//         popupClose(e.target.closest('.popup'));
-//       }
-//     });
-//   }
-// }
-
-// function popupClose(popupActive, doUnlock = true) {
-//     if(unlock){
-//       popupActive.classList.remove('open');
-//       if(doUnlock){
-//         bodyUnLock();
-//       }
-//     }
-// }
