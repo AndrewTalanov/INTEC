@@ -28,7 +28,6 @@
     }
 
     .menu {
-        // width: 65%;
         display: flex;
         justify-content: center;
 
@@ -44,7 +43,7 @@
                 left: 0;
                 width: 100%;
                 background: $white;
-                transform: translateY(-100%);
+                transform: translateY(-200vh);
                 transition: transform 0.5s;
                 display: flex;
                 flex-direction: column;

@@ -102,7 +102,7 @@
     &__swiper {
       margin: 60px 0 0 0;
       width: 100%;
-      background: right top / 70% 55% url("img/content/BG.png") no-repeat;
+      background: right top / 70% 55% url("@img/content/BG.png") no-repeat;
 
       &-prev,
       &-next {
@@ -278,7 +278,7 @@
 .section-form-call {
   margin-top: 55px;
   padding: 46px 0;
-  background: 0 0 / cover url('img/content/back3.png') no-repeat;
+  background: 0 0 / cover url('@img/content/back3.png') no-repeat;
 
   .wrapper {
     .form-call {
@@ -354,57 +354,46 @@
           flex-direction: column;
           padding: 27px;
           box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.04);
-          // background-color: $white;
           background-color: rgb(255, 255, 255);
           border-radius: 0px 33px 33px 33px;
           min-width: 70%;
           height: 224px;
-          transition: 1s;
 
-          // & img {
-          //   max-width: 32px;
-          //   max-height: 35px;
-          //   fill: green;
-          // }
-          & svg {
+          &, svg path, p, h3, &__link {
+            transition: 1s;
+          } 
+
+          svg {
             max-width: 32px;
             max-height: 35px;
-
             path {
-              transition: 1.5s;
               fill: $black;
             }
           }
 
           p,
           h3 {
-            transition: 2s;
             color: $black;
           }
           h3 {
             margin: 14px 0 10px 0;
           }
-          & p {
+          p {
             font-size: 14px;
             font-weight: 400;
-            // margin-bottom: 35px;
-
           }
 
           &__link {
-            transition: 1s;
-            // display: none;
             height: 0;
             opacity: 0;
             visibility: hidden;
-
           }
 
           &:hover {
             height: 264px;
             background-color: $orange;
 
-            & svg {
+            svg {
               path {
                 fill: $white;
               }
@@ -415,7 +404,6 @@
               color: $white;
             }
             p {
-              transition: 0.5s;
               margin-bottom: 35px;
             }
 
@@ -523,7 +511,7 @@
 
 .section-feedback {
   margin-top: 4.19em;
-  background: 0 0 / cover url('img/content/back4.png') no-repeat;
+  background: 0 0 / cover url('@img/content/back4.png') no-repeat;
   padding: 100px 0;
   position: relative;
 
@@ -581,22 +569,22 @@
         min-height: 132px;
 
         &.bg-1 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg1.png');
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('@img/content/articles-item-bg1.png');
           border-radius: 10px;
         }
 
         &.bg-2 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg2.png');
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('@img/content/articles-item-bg2.png');
           border-radius: 10px;
         }
 
         &.bg-3 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg3.png');
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('@img/content/articles-item-bg3.png');
           border-radius: 10px;
         }
 
         &.bg-4 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('img/content/articles-item-bg4.png');
+          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), 0 0 / cover url('@img/content/articles-item-bg4.png');
           border-radius: 10px;
         }
 

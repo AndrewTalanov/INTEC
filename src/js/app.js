@@ -71,8 +71,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // маска для номера телефона
   phoneMask = IMask(
     document.getElementById('phone-mask'), {
-    mask: '+{7} (000) 000-00-00'
-  });
+      mask: '+{7} (000) 000-00-00'
+    });
+
+
 });
 
 //Бургер меню
@@ -88,5 +90,6 @@ menuBtn.addEventListener('click', function () {
   } else {
     document.body.style.overflow = 'unset';
   }
-
 });
+
+
