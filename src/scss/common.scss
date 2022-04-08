@@ -5,9 +5,13 @@ p {
   margin: 0;
   color: #2F2F2F;
 }
+
 html {
   min-width: 320px;
+  background: 0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
+  // 1159px or auto
 }
+
 html,
 body {
   margin: 0;
@@ -27,7 +31,7 @@ a {
   text-decoration: none;
 }
 
-button{
+button {
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   // & :hover{
@@ -36,9 +40,11 @@ button{
   // }
 
 }
+
 textarea {
   font-family: 'Montserrat', sans-serif;
 }
+
 :root {
   font-family: 'Montserrat', sans-serif;
   -webkit-tap-highlight-color: transparent;
