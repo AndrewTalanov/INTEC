@@ -91,5 +91,3 @@ menuBtn.addEventListener('click', function () {
     document.body.style.overflow = 'unset';
   }
 });
-
-
