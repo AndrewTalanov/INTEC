@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     spaceBetween: 10,
     simulateTouch: true,
     grabCursor: true,
-    // centeredSlides: true,
   });
 
   // ВТОРОЙ СЛАЙДЕР
@@ -38,25 +37,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     grabCursor: true,
   });
 
-  // суть такова: когда точка пагинации становится крупнее (8на8 вместо 4на4), ее позиция становится слишком кривой относительно
-  // полосы под точками, следующий код меняет позицию (left) точки на единичку влево, чтоб хоть немного ровнее все это дело смотрелось.
-  // Интересно, что произойдет при адаптации всего этого дела (надеюсь ничего (страшного) (в теории и не должно))
-  let prevSlide;
-  let prevPos;
+  // let prevSlide;
+  // let prevPos;
 
   secondSwiper.on('transitionEnd', function () {
 
-    // получили активный слайд и значение его left без px 
     let slide = paginationDots[secondSwiper.realIndex];
     // let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
 
-    // удалили у всех (на всякий случай) элементов класс активности и добавили его только тому, кому надо
     paginationDots.forEach(item => {
       item.classList.remove('active');
     })
     slide.classList.add('active');
 
-    // Предыдущий слайд - если имеет какое либо значение, то установить этому слайду предыдущую позицию
     // if (prevSlide) {
     //   prevSlide.style.left = prevPos + 'px';
     // }
@@ -64,31 +57,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // prevSlide = slide;
     // prevPos = pos;
 
-    // и вот собственно сама суть
     // slide.style.left = pos - 1 + 'px';
+  });
+
+  //Бургер меню
+  const menuBtn = document.querySelector('.menu__icon');
+  const menu = document.querySelector('.menu__body');
+
+  menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+
+    scrollSite();
+  });
+
+  // popup
+  const popupBtn = document.querySelector('.popup-btn');
+  const popup = document.querySelector('.popup');
+  const popupClose = document.querySelector('.close-popup');
+
+  popupBtn.addEventListener('click', function () {
+    popup.classList.toggle('open-popup');
+    scrollSite();
+  });
+  popupClose.addEventListener('click', function () {
+    popup.classList.toggle('open-popup');
+    scrollSite();
   });
 
   // маска для номера телефона
   phoneMask = IMask(
     document.getElementById('phone-mask'), {
-      mask: '+{7} (000) 000-00-00'
-    });
+    mask: '+{7} (000) 000-00-00'
+  });
 
-
-});
-
-//Бургер меню
-let menuBtn = document.querySelector('.menu__icon');
-let menu = document.querySelector('.menu__body');
-
-menuBtn.addEventListener('click', function () {
-  menuBtn.classList.toggle('active');
-  menu.classList.toggle('active');
-
-  if (document.body.style.overflow != 'hidden') {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'unset';
+  // scroll body 
+  function scrollSite() {
+    if (document.body.style.overflow != 'hidden') {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
   }
 });
 
