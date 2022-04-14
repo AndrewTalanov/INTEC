@@ -44,6 +44,7 @@
                 button {
                     outline: none;
                     background: transparent;
+                    color: $white;
                 }
 
                 & input {
@@ -62,8 +63,8 @@
                     height: 15px;
                     width: 15px;
                     position: absolute;
-                    top: 13px;
-                    right: 6px;
+                    top: 32%;
+                    right: 0;
                     cursor: pointer;
                 }
             }
@@ -125,7 +126,7 @@
             @include breakpoint (md) {
                 display: flex;
                 flex-direction: column;
-                margin: 25px 0 39px 0;
+                margin: 25px 0 0 0;
 
                 & img {
                     max-width: 100px;
@@ -136,7 +137,7 @@
                 color: #BBBBBB;
 
                 @include breakpoint (md) {
-                    margin: 16px 0 20px 0;
+                    margin: 16px 0 39px 0;
                 }
             }
         }

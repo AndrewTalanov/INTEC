@@ -10,6 +10,17 @@ import * as webp from "./files/webp.js";
 webp.isWebp();
 
 document.addEventListener("DOMContentLoaded", function (event) {
+  //Бургер меню
+  const menuBtn = document.querySelector('.menu__icon');
+  const menu = document.querySelector('.menu__body');
+
+  menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+
+    scrollSite();
+  });
+
 
   // СЛАЙДЕР В НАЧАЛЕ (первый)
   new Swiper('.main-screen__swiper', {
@@ -47,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     paginationDots.forEach(item => {
       item.classList.remove('active');
-    })
+    });
     slide.classList.add('active');
 
     // if (prevSlide) {
@@ -59,17 +70,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // slide.style.left = pos - 1 + 'px';
   });
+  //-------------------------Слайдер и табы разеала "Меню"-------------------------//
 
-  //Бургер меню
-  const menuBtn = document.querySelector('.menu__icon');
-  const menu = document.querySelector('.menu__body');
-
-  menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('active');
-    menu.classList.toggle('active');
-
-    scrollSite();
+  const menuDishesSwiper = new Swiper('.menu-dishes-slider', {
+    simulateTouch: true,
+    grabCursor: true,
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 24,
+    initialSlide: 1,
   });
+
+  new Swiper('.first-food-slider', {
+    // loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    simulateTouch: true,
+    spaceBetween: 81,
+    grabCursor: true,
+    nested: true,
+  });
+
+
 
   // popup
   const popupBtn = document.querySelector('.popup-btn');
@@ -88,8 +110,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // маска для номера телефона
   phoneMask = IMask(
     document.getElementById('phone-mask'), {
-    mask: '+{7} (000) 000-00-00'
-  });
+      mask: '+{7} (000) 000-00-00'
+    });
 
   // scroll body 
   function scrollSite() {

@@ -80,6 +80,18 @@ $light-white:#FBF8F8;
 
 
 // кнопки-ссылки (наше меню, подробнее, оставить отзыв и тд)
+
+.btn-slider-menu-link{
+  background: $white;
+  width: 33.98px;
+  height: 33.98px;
+  cursor: pointer;
+  border-radius: 50%;
+  // background: url('@img/icons/sl-arrow-right-orange.svg') 0% 50% no-repeat;
+  // background-position: center;
+}
+
+
 .btn-slider-prev,
 .btn-slider-next {
   width: 46px;
