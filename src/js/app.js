@@ -83,12 +83,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   new Swiper('.first-food-slider', {
     // loop: true,
-    slidesPerView: 1,
+    initialSlide: 1,
     centeredSlides: true,
     simulateTouch: true,
-    spaceBetween: 81,
+    spaceBetween: 80,
     grabCursor: true,
-    nested: true,
+    // nested: true,
   });
 
 
