@@ -91,6 +91,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // nested: true,
   });
 
+  menuDishesSwiper.on('transitionEnd', function () {
+
+    let slidersDishes = document.querySelectorAll(".sliders-item");
+
+    let index = menuDishesSwiper.realIndex;
+
+    slidersDishes.forEach(item => {
+      item.style.display = "none";
+    });
+    slidersDishes[index].style.display = "block";
+  })
+
+
 
 
   // popup
