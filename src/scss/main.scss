@@ -317,7 +317,7 @@
                     justify-content: center;
                     margin-left: -18px;
 
-                    & img {
+                    & .img {
                       width: 172.38px;
                       height: 171.74px;
                       position: absolute;
@@ -377,11 +377,22 @@
                       }
 
                       .btn-slider-menu-link {
-                        display: block;
+                        background: $white;
+                        width: 33.98px;
+                        height: 33.98px;
+                        cursor: pointer;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         position: absolute;
                         z-index: 2;
                         left: 28px;
                         top: 0;
+                        img {
+                          width: 30%;
+                          padding: 0 0 0 2%;
+                        }
                       }
 
                       .title-name-food {
