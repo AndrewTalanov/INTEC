@@ -83,14 +83,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   new Swiper('.first-food-slider', {
     // loop: true,
-    slidesPerView: 1,
+    initialSlide: 1,
     centeredSlides: true,
     simulateTouch: true,
-    spaceBetween: 81,
+    spaceBetween: 80,
     grabCursor: true,
-    nested: true,
+    // nested: true,
   });
 
+  menuDishesSwiper.on('transitionEnd', function () {
+
+    let slidersDishes = document.querySelectorAll(".sliders-item");
+
+    let index = menuDishesSwiper.realIndex;
+
+    slidersDishes.forEach(item => {
+      item.style.display = "none";
+    });
+
+    slidersDishes[index].style.display = "block";
+  });
 
 
   // popup
