@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   //-------------------------Слайдер и табы разеала "Меню"-------------------------//
 
-  const menuDishesSwiper = new Swiper('.menu-dishes-slider', {
+  const menuDishesSwiper = new Swiper('.type-dishes-slider', {
     simulateTouch: true,
     grabCursor: true,
     slidesPerView: 2,
@@ -81,14 +81,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     initialSlide: 1,
   });
 
-  new Swiper('.first-food-slider', {
-    // loop: true,
+  new Swiper('.menu-food-slider', {
     initialSlide: 1,
+    slidesPerView: 1.8,
     centeredSlides: true,
     simulateTouch: true,
-    spaceBetween: 80,
+    spaceBetween: 10,
     grabCursor: true,
-    // nested: true,
   });
 
   menuDishesSwiper.on('transitionEnd', function () {

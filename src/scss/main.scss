@@ -243,29 +243,154 @@
 .section-menu-dishes {
   margin-top: 23%;
 
-  .menu-dishes {
-    &__container {
-      &__title {
-        text-align: center;
+  .type-dishes {
+
+    &-title {
+      text-align: center;
+    }
+
+    &-slider {
+      @include breakpoint(md) {
+        margin-top: 22px;
+        overflow: hidden;
+        position: relative;
       }
 
-      .menu-dishes-slider {
-        @include breakpoint(md) {
-          margin-top: 22px;
-          width: 100%;
-          overflow: hidden;
-          position: relative;
+      .slider-menu {
+        &__wrapper {
+          &__item {
+            .dishes-tab-nav {
+              .tab-underline {
+                display: none;
+              }
+            }
+          }
+
+          //Активный слайд в слайдере 
+          .swiper-slide-active {
+            .dishes-tab-nav {
+              display: flex;
+              justify-content: center;
+
+              & a {
+                font-weight: 600;
+              }
+            }
+
+            .tab-underline {
+              display: block;
+              position: relative;
+              margin-top: 10px;
+              animation-duration: 1s;
+              animation-name: slidein;
+              animation-iteration-count: 1;
+              background-color: $orange;
+              width: 100%;
+              height: 3px;
+
+              @keyframes slidein {
+                from {
+                  right: -50%;
+                  width: 0%;
+                }
+
+                to {
+                  right: 0%;
+                  width: 100%;
+                }
+              }
+            }
+          }
         }
+      }
 
-
-        // .line-slider {
-        //   position: absolute;
-        //   top: 20px;
-        //   width: 100%;
-        // }
+      .line-slider {
+        position: absolute;
+        top: 35px;
+        width: 100%;
       }
     }
   }
+
+  .menu-food-container {
+    width: 100%;
+    margin-top: 23px;
+
+    .menu-food-slider {
+      position: relative;
+      overflow: hidden;
+
+      .food-slider {
+        &-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .food-img {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+          }
+
+          .btn-slider-menu {
+            visibility: hidden;
+            background: $white;
+            width: 33.98px;
+            height: 33.98px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 3;
+            top: 47%;
+            left: 11%;
+          }
+
+          .food-title {
+            background: $white;
+            border-radius: 0px 26.5935px 26.5935px 26.5935px;
+            width: 184px;
+            height: 157px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 123px;
+
+            & h3 {
+              font-size: 14px;
+              margin-top: 49px;
+            }
+
+            & p {
+              margin-top: 17px;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .swiper-slide-active {
+          .btn-slider-menu {
+            visibility: visible;
+          }
+
+          .food-title {
+            background: $orange;
+            box-shadow: 0px 0px 8.68361px rgba(255, 119, 20, 0.44);
+
+            & h3,
+            p {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 }
 
 .section-about-company {
@@ -511,6 +636,7 @@
       }
 
       &__card {
+
         p,
         h5 {
           font-size: 12px;
