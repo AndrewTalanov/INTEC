@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   //-------------------------Слайдер и табы разеала "Меню"-------------------------//
 
-  const menuDishesSwiper = new Swiper('.menu-dishes-slider', {
+  const menuDishesSwiper = new Swiper('.type-dishes-slider', {
     simulateTouch: true,
     grabCursor: true,
     slidesPerView: 2,

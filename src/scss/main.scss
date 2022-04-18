@@ -243,175 +243,72 @@
 .section-menu-dishes {
   margin-top: 23%;
 
-  .menu-dishes {
-    &__container {
-      &__title {
-        text-align: center;
+  .type-dishes {
+
+    &-title {
+      text-align: center;
+    }
+
+    &-slider {
+      @include breakpoint(md) {
+        margin-top: 22px;
+        overflow: hidden;
+        position: relative;
       }
 
-      .menu-dishes-slider {
-        @include breakpoint(md) {
-          margin-top: 22px;
-          width: 100%;
-          overflow: hidden;
-          position: relative;
-        }
-
-        .swiper-wrapper {
-          .swiper-slide {
-            text-align: center;
-
-            .first-food__container {
-              visibility: hidden;
+      .slider-menu {
+        &__wrapper {
+          &__item {
+            .dishes-tab-nav {
+              .tab-underline {
+                display: none;
+              }
             }
+          }
 
-            &-active {
+          //Активный слайд в слайдере 
+          .swiper-slide-active {
+            .dishes-tab-nav {
+              display: flex;
+              justify-content: center;
+
               & a {
                 font-weight: 600;
               }
 
-              .tab-underline {
-                position: relative;
-                top: 16px;
-                animation-duration: 1s;
-                animation-name: slidein;
-                animation-iteration-count: 1;
-                background-color: $orange;
-                width: 100%;
-                height: 3px;
+            }
 
-                @keyframes slidein {
-                  from {
-                    right: -50%;
-                    width: 0%;
-                  }
+            .tab-underline {
+              display: block;
+              position: relative;
+              margin-top: 16px;
+              animation-duration: 1s;
+              animation-name: slidein;
+              animation-iteration-count: 1;
+              background-color: $orange;
+              width: 100%;
+              height: 3px;
 
-                  to {
-                    right: 0%;
-                    width: 100%;
-                  }
-                }
-              }
-
-              .first-food__container {
-                visibility: visible;
-                margin-top: 36px;
-
-                .content-inner {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
+              @keyframes slidein {
+                from {
+                  right: -50%;
+                  width: 0%;
                 }
 
-                .first-food-slider {
-                  .slide-food {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    margin-left: -18px;
-
-                    & .img {
-                      width: 172.38px;
-                      height: 171.74px;
-                      position: absolute;
-                      top: 8px;
-
-                      z-index: 1;
-                    }
-                  }
-
-                  .content-inner {
-                    background: none;
-                    box-shadow: none;
-                    margin-top: 130px;
-
-                    & p,
-                    h3 {
-                      color: black;
-                    }
-
-                    & h3 {
-                      font-size: 14px;
-                    }
-
-                    & p {
-                      font-size: 12px;
-                    }
-
-                    .btn-slider-menu-link {
-                      display: none;
-                    }
-                    .title-name-food {
-                      margin-top: 46px;
-                      height: 80%;
-                    }
-                  }
-
-                  .swiper-slide-active {
-                    .content-inner {
-                      background: $orange;
-                      box-shadow: 0px 0px 8.68361px rgba(255, 119, 20, 0.44);
-                      border-radius: 0px 26.5935px 26.5935px 26.5935px;
-                      width: 170px;
-                      height: 157px;
-                      position: relative;
-                      margin-top: 130px;
-                      display: flex;
-                      justify-content: center;
-                      flex-direction: column;
-
-                      & h3 {
-                        font-size: 14px;
-                        color: white;
-                      }
-
-                      & p {
-                        font-size: 12px;
-                        color: white;
-                      }
-
-                      .btn-slider-menu-link {
-                        background: $white;
-                        width: 33.98px;
-                        height: 33.98px;
-                        cursor: pointer;
-                        border-radius: 50%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: absolute;
-                        z-index: 2;
-                        left: 21px;
-                        top: 4px;
-                        img {
-                          width: 30%;
-                          padding: 0 0 0 2%;
-                        }
-                      }
-
-                      .title-name-food {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        height: 50%;
-                        margin-top: 23px;
-                        height: 60%;
-                        width: 90%;
-                      }
-                    }
-                  }
+                to {
+                  right: 0%;
+                  width: 100%;
                 }
               }
             }
           }
         }
+      }
 
-        .line-slider {
-          position: absolute;
-          top: 41px;
-          width: 100%;
-        }
+      .line-slider {
+        position: absolute;
+        top: 41px;
+        width: 100%;
       }
     }
   }
@@ -660,6 +557,7 @@
       }
 
       &__card {
+
         p,
         h5 {
           font-size: 12px;
