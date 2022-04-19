@@ -8,8 +8,6 @@ p {
 
 html {
   min-width: 320px;
-  // background: 0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
-  // 1159px or auto
 }
 
 html,
@@ -21,7 +19,7 @@ body {
 p {
   font-weight: 500;
   line-height: 149.4%;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 a {
@@ -34,11 +32,6 @@ a {
 button {
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
-  // & :hover{
-  //   transition: 0.3s;
-  //   background-color: $dark-orange;
-  // }
-
 }
 
 textarea {
@@ -127,7 +120,7 @@ $light-white:#FBF8F8;
 // элементы формы
 .input {
   position: relative;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #585858;
   width: 100%;
 
