@@ -8,7 +8,7 @@ p {
 
 html {
   min-width: 320px;
-  background: 0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
+  // background: 0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
   // 1159px or auto
 }
 
@@ -157,6 +157,6 @@ input:focus {
 
 // фон
 body {
-  background: 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
+  background:0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat, 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
     0 0 / 100% auto url("@img/content/back1-mobile.png") no-repeat;
 }

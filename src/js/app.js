@@ -118,12 +118,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     scrollSite();
   });
 
-  // маска для номера телефона
-  phoneMask = IMask(
-    document.getElementById('phone-mask'), {
-      mask: '+{7} (000) 000-00-00'
-    });
-
   // scroll body 
   function scrollSite() {
     if (document.body.style.overflow != 'hidden') {
@@ -132,4 +126,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.body.style.overflow = 'unset';
     }
   }
+
+  let phoneMask = document.querySelectorAll('.phone-mask');
+  // маска для номера телефона
+  phoneMask1 = IMask(
+    phoneMask[0], {
+      mask: '+{7} (000) 000-00-00'},
+    phoneMask[1], {
+      mask: '+{7} (000) 000-00-00'},
+  );
+  // phoneMask2 = IMask(
+  //   document.getElementById('phone-mask2'), {
+  //     mask: '+{7} (000) 000-00-00'
+  // });
+
 });

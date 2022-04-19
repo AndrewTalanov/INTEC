@@ -303,8 +303,10 @@
 
       .line-slider {
         position: absolute;
-        top: 35px;
+        top: 34px;
         width: 100%;
+        height: 1px;
+        background-color: grey;
       }
     }
   }
@@ -321,10 +323,10 @@
         &-content {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          // align-items: center;
 
           .food-img {
-            width: 100%;
+            width: 110%;
             position: absolute;
             z-index: 2;
           }
@@ -341,20 +343,21 @@
             align-items: center;
             position: absolute;
             z-index: 3;
-            top: 47%;
+            top: 50%;
             left: 11%;
           }
 
           .food-title {
             background: $white;
             border-radius: 0px 26.5935px 26.5935px 26.5935px;
-            width: 184px;
+            // width: 184px;
+            width: 100%;
             height: 157px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: 123px;
+            margin-top: 80%;
 
             & h3 {
               font-size: 14px;
@@ -364,6 +367,7 @@
             & p {
               margin-top: 17px;
               font-size: 12px;
+              width: 173px;
             }
           }
         }
