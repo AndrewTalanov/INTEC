@@ -48,27 +48,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     grabCursor: true,
   });
 
-  // let prevSlide;
-  // let prevPos;
-
   secondSwiper.on('transitionEnd', function () {
 
     let slide = paginationDots[secondSwiper.realIndex];
-    // let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
 
     paginationDots.forEach(item => {
       item.classList.remove('active');
     });
     slide.classList.add('active');
-
-    // if (prevSlide) {
-    //   prevSlide.style.left = prevPos + 'px';
-    // }
-
-    // prevSlide = slide;
-    // prevPos = pos;
-
-    // slide.style.left = pos - 1 + 'px';
   });
   //-------------------------Слайдер и табы разеала "Меню"-------------------------//
 
@@ -127,17 +114,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 
-  let phoneMask = document.querySelectorAll('.phone-mask');
   // маска для номера телефона
-  phoneMask1 = IMask(
-    phoneMask[0], {
-      mask: '+{7} (000) 000-00-00'},
-    phoneMask[1], {
-      mask: '+{7} (000) 000-00-00'},
-  );
-  // phoneMask2 = IMask(
-  //   document.getElementById('phone-mask2'), {
-  //     mask: '+{7} (000) 000-00-00'
-  // });
-
+  let phoneMask = document.querySelectorAll('.phone-mask');
+  let maskOptions = {
+    mask: '+{7} (000) 000-00-00'
+  };
+  phoneMask.forEach(item => {
+    let mask = IMask(item, maskOptions);
+  })
+  
 });

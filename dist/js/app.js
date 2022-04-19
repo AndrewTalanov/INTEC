@@ -9379,7 +9379,10 @@
         function scrollSite() {
             if ("hidden" != document.body.style.overflow) document.body.style.overflow = "hidden"; else document.body.style.overflow = "unset";
         }
-        phoneMask = IMask(document.getElementById("phone-mask"), {
+        let phoneMask = document.querySelectorAll(".phone-mask");
+        phoneMask1 = IMask(phoneMask[0], {
+            mask: "+{7} (000) 000-00-00"
+        }, phoneMask[1], {
             mask: "+{7} (000) 000-00-00"
         });
     }));
