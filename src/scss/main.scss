@@ -244,17 +244,14 @@
   margin-top: 23%;
 
   .type-dishes {
-
     &-title {
       text-align: center;
     }
 
     &-slider {
-      @include breakpoint(md) {
-        margin-top: 22px;
-        overflow: hidden;
-        position: relative;
-      }
+      margin-top: 22px;
+      overflow: hidden;
+      position: relative;
 
       .slider-menu {
         &__wrapper {
