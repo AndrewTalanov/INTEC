@@ -32,6 +32,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     spaceBetween: 10,
     simulateTouch: true,
     grabCursor: true,
+    breakpoints: {
+      '548': {
+        spaceBetween: 15,
+        slidesPerView: 1.5 ,
+      },
+      '636': {
+        slidesPerView: 1.6,
+      },
+      '674': {
+        slidesPerView: 1.8,
+      },
+      '764': {
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      '865': {
+        slidesPerView: 2.3,
+      },
+      '984': {
+        slidesPerView: 2.8,
+      },
+      '1200': {
+        spaceBetween: 30,
+      },
+      '1240': {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+    }
   });
 
   // ВТОРОЙ СЛАЙДЕР
