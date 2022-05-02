@@ -9306,6 +9306,13 @@
     }
     isWebp();
     document.addEventListener("DOMContentLoaded", (function(event) {
+        const menuBtn = document.querySelector(".menu__icon");
+        const menu = document.querySelector(".menu__body");
+        menuBtn.addEventListener("click", (function() {
+            menuBtn.classList.toggle("active");
+            menu.classList.toggle("active");
+            scrollSite();
+        }));
         new core(".main-screen__swiper", {
             navigation: {
                 nextEl: ".main-screen__swiper-next"
@@ -9314,7 +9321,36 @@
             slidesPerView: 1.3,
             spaceBetween: 10,
             simulateTouch: true,
-            grabCursor: true
+            grabCursor: true,
+            breakpoints: {
+                548: {
+                    spaceBetween: 15,
+                    slidesPerView: 1.5
+                },
+                636: {
+                    slidesPerView: 1.6
+                },
+                674: {
+                    slidesPerView: 1.8
+                },
+                764: {
+                    spaceBetween: 20,
+                    slidesPerView: 2
+                },
+                865: {
+                    slidesPerView: 2.3
+                },
+                984: {
+                    slidesPerView: 2.8
+                },
+                1200: {
+                    spaceBetween: 30
+                },
+                1240: {
+                    spaceBetween: 30,
+                    slidesPerView: 3
+                }
+            }
         });
         const paginationDots = document.querySelectorAll(".dots-item");
         const secondSwiper = new core(".popular-dishes__swiper", {
@@ -9334,12 +9370,29 @@
             }));
             slide.classList.add("active");
         }));
-        const menuBtn = document.querySelector(".menu__icon");
-        const menu = document.querySelector(".menu__body");
-        menuBtn.addEventListener("click", (function() {
-            menuBtn.classList.toggle("active");
-            menu.classList.toggle("active");
-            scrollSite();
+        const menuDishesSwiper = new core(".type-dishes-slider", {
+            simulateTouch: true,
+            grabCursor: true,
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 24,
+            initialSlide: 1
+        });
+        new core(".menu-food-slider", {
+            initialSlide: 1,
+            slidesPerView: 1.8,
+            centeredSlides: true,
+            simulateTouch: true,
+            spaceBetween: 10,
+            grabCursor: true
+        });
+        menuDishesSwiper.on("transitionEnd", (function() {
+            let slidersDishes = document.querySelectorAll(".sliders-item");
+            let index = menuDishesSwiper.realIndex;
+            slidersDishes.forEach((item => {
+                item.style.display = "none";
+            }));
+            slidersDishes[index].style.display = "block";
         }));
         const popupBtn = document.querySelector(".popup-btn");
         const popup = document.querySelector(".popup");
@@ -9352,11 +9405,15 @@
             popup.classList.toggle("open-popup");
             scrollSite();
         }));
-        phoneMask = IMask(document.getElementById("phone-mask"), {
-            mask: "+{7} (000) 000-00-00"
-        });
         function scrollSite() {
             if ("hidden" != document.body.style.overflow) document.body.style.overflow = "hidden"; else document.body.style.overflow = "unset";
         }
+        let phoneMask = document.querySelectorAll(".phone-mask");
+        let maskOptions = {
+            mask: "+{7} (000) 000-00-00"
+        };
+        phoneMask.forEach((item => {
+            IMask(item, maskOptions);
+        }));
     }));
 })();

@@ -1,3 +1,8 @@
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
 h1,
 h2,
 h3,
@@ -8,8 +13,7 @@ p {
 
 html {
   min-width: 320px;
-  background: 0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
-  // 1159px or auto
+  font-size: 16px;
 }
 
 html,
@@ -21,7 +25,7 @@ body {
 p {
   font-weight: 500;
   line-height: 149.4%;
-  font-size: 16px;
+  font-size: rem(16);
 }
 
 a {
@@ -34,11 +38,6 @@ a {
 button {
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
-  // & :hover{
-  //   transition: 0.3s;
-  //   background-color: $dark-orange;
-  // }
-
 }
 
 textarea {
@@ -78,8 +77,6 @@ $light-white:#FBF8F8;
   }
 }
 
-
-// кнопки-ссылки (наше меню, подробнее, оставить отзыв и тд)
 .btn-slider-prev,
 .btn-slider-next {
   width: 46px;
@@ -129,7 +126,7 @@ $light-white:#FBF8F8;
 // элементы формы
 .input {
   position: relative;
-  font-size: 14px;
+  font-size: rem(14);
   color: #585858;
   width: 100%;
 
@@ -149,6 +146,9 @@ $light-white:#FBF8F8;
     padding: 0 5px;
     background: $white;
     font-weight: 600;
+    @media (min-width: 460px) {
+      left: 15px;
+    }
   }
 }
 
@@ -159,6 +159,10 @@ input:focus {
 
 // фон
 body {
-  background: 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
-    0 0 / 100% auto url("@img/content/back1-mobile.png") no-repeat;
+  background:0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat, 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
+    0 0 / 100% 680px url("@img/content/back1-mobile.png") no-repeat;
+  @media (min-width: 420px) {
+    background:0 100% / 100% 1100px url("@img/content/final-back.png") no-repeat, 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
+    0 0 / 100% 680px url("@img/content/back1-mobile.png") no-repeat;
+  }
 }

@@ -10,6 +10,17 @@ import * as webp from "./files/webp.js";
 webp.isWebp();
 
 document.addEventListener("DOMContentLoaded", function (event) {
+  //Бургер меню
+  const menuBtn = document.querySelector('.menu__icon');
+  const menu = document.querySelector('.menu__body');
+
+  menuBtn.addEventListener('click', function () {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+
+    scrollSite();
+  });
+
 
   // СЛАЙДЕР В НАЧАЛЕ (первый)
   new Swiper('.main-screen__swiper', {
@@ -21,6 +32,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     spaceBetween: 10,
     simulateTouch: true,
     grabCursor: true,
+    breakpoints: {
+      '548': {
+        spaceBetween: 15,
+        slidesPerView: 1.5 ,
+      },
+      '636': {
+        slidesPerView: 1.6,
+      },
+      '674': {
+        slidesPerView: 1.8,
+      },
+      '764': {
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      '865': {
+        slidesPerView: 2.3,
+      },
+      '984': {
+        slidesPerView: 2.8,
+      },
+      '1200': {
+        spaceBetween: 30,
+      },
+      '1240': {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+    }
   });
 
   // ВТОРОЙ СЛАЙДЕР
@@ -37,39 +77,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
     grabCursor: true,
   });
 
-  // let prevSlide;
-  // let prevPos;
-
   secondSwiper.on('transitionEnd', function () {
 
     let slide = paginationDots[secondSwiper.realIndex];
-    // let pos = parseInt(window.getComputedStyle(slide, null).getPropertyValue('left').match(/\d+/));
 
     paginationDots.forEach(item => {
       item.classList.remove('active');
-    })
+    });
     slide.classList.add('active');
+  });
+  //-------------------------Слайдер и табы разеала "Меню"-------------------------//
 
-    // if (prevSlide) {
-    //   prevSlide.style.left = prevPos + 'px';
-    // }
-
-    // prevSlide = slide;
-    // prevPos = pos;
-
-    // slide.style.left = pos - 1 + 'px';
+  const menuDishesSwiper = new Swiper('.type-dishes-slider', {
+    simulateTouch: true,
+    grabCursor: true,
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 24,
+    initialSlide: 1,
   });
 
-  //Бургер меню
-  const menuBtn = document.querySelector('.menu__icon');
-  const menu = document.querySelector('.menu__body');
-
-  menuBtn.addEventListener('click', function () {
-    menuBtn.classList.toggle('active');
-    menu.classList.toggle('active');
-
-    scrollSite();
+  new Swiper('.menu-food-slider', {
+    initialSlide: 1,
+    slidesPerView: 1.8,
+    centeredSlides: true,
+    simulateTouch: true,
+    spaceBetween: 10,
+    grabCursor: true,
   });
+
+  menuDishesSwiper.on('transitionEnd', function () {
+
+    let slidersDishes = document.querySelectorAll(".sliders-item");
+
+    let index = menuDishesSwiper.realIndex;
+
+    slidersDishes.forEach(item => {
+      item.style.display = "none";
+    });
+
+    slidersDishes[index].style.display = "block";
+  });
+
 
   // popup
   const popupBtn = document.querySelector('.popup-btn');
@@ -85,12 +134,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     scrollSite();
   });
 
-  // маска для номера телефона
-  phoneMask = IMask(
-    document.getElementById('phone-mask'), {
-    mask: '+{7} (000) 000-00-00'
-  });
-
   // scroll body 
   function scrollSite() {
     if (document.body.style.overflow != 'hidden') {
@@ -99,4 +142,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.body.style.overflow = 'unset';
     }
   }
+
+  // маска для номера телефона
+  let phoneMask = document.querySelectorAll('.phone-mask');
+  let maskOptions = {
+    mask: '+{7} (000) 000-00-00'
+  };
+  phoneMask.forEach(item => {
+    let mask = IMask(item, maskOptions);
+  })
+  
 });
