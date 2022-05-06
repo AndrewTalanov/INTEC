@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     breakpoints: {
       '548': {
         spaceBetween: 15,
-        slidesPerView: 1.5 ,
+        slidesPerView: 1.5,
       },
       '636': {
         slidesPerView: 1.6,
@@ -95,12 +95,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
     centeredSlides: true,
     spaceBetween: 24,
     initialSlide: 1,
+    breakpoints: {
+      '500': {
+        spaceBetween: 30,  
+        slidesPerView: 2.3,
+      },
+      
+    }
+    
   });
 
-  menuDishesSwiper.on('transitionStart', function(e) {
+  menuDishesSwiper.on('transitionStart', function (e) {
 
     // для предыдущего слайда
-    e.slides.forEach(item => { 
+    e.slides.forEach(item => {
       if (item.classList.contains("swiper-slide-prev")) {
 
         let text = item.textContent || item.innerText;
@@ -110,17 +118,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
           e.slides[e.previousIndex].firstElementChild.style.display = "flex";
           e.slides[e.previousIndex].firstElementChild.style.justifyContent = "flex-end";
-          
+
         }
       }
-    }) 
+    });
 
     e.slides[e.realIndex].firstElementChild.style.display = "flex";
     e.slides[e.realIndex].firstElementChild.style.justifyContent = "center";
 
     // для следующего слайда
 
-    e.slides.forEach(item => { 
+    e.slides.forEach(item => {
       if (item.classList.contains("swiper-slide-next")) {
 
         let text = item.textContent || item.innerText;
@@ -130,15 +138,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
           e.slides[e.realIndex + 1].firstElementChild.style.display = "flex";
           e.slides[e.realIndex + 1].firstElementChild.style.justifyContent = "flex-start";
-          
+
         }
       }
-    }) 
+    });
 
     e.slides[e.realIndex].firstElementChild.style.display = "flex";
     e.slides[e.realIndex].firstElementChild.style.justifyContent = "center";
 
-  })
+  });
 
   new Swiper('.menu-food-slider', {
     initialSlide: 1,
@@ -147,6 +155,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     simulateTouch: true,
     spaceBetween: 10,
     grabCursor: true,
+    breakpoints: {
+      '400': {
+        spaceBetween: 15,
+      },
+      '500': {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      '600': {  
+        spaceBetween: 5,
+        slidesPerView: 2,
+      },
+      '768': {  
+        slidesPerView: 2.1,
+      },
+    }
   });
 
   menuDishesSwiper.on('transitionEnd', function () {
@@ -193,6 +217,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   };
   phoneMask.forEach(item => {
     let mask = IMask(item, maskOptions);
-  })
-  
+  });
+
 });
