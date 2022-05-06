@@ -439,6 +439,7 @@
         &__wrapper {
           &__item {
             .dishes-tab-nav {
+
               // display: flex;
               .tab-underline {
                 display: none;
@@ -507,11 +508,21 @@
         &-content {
           display: flex;
           flex-direction: column;
+          align-items: center;
 
           .food-img {
-            width: 100%;
+            width: 173px;
+
             position: absolute;
             z-index: 2;
+
+            @media (min-width:500px) {
+              width: 185px;
+            }
+
+            @media (min-width:650px) {
+              width: 190px;
+            }
           }
 
           .btn-slider-menu {
@@ -524,21 +535,29 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
+            // position: absolute;
+            // left: 12%;
             z-index: 3;
-            left: 12%;
+            position: fixed;
+            z-index: 3;
+            margin: 5px 0 0 -105px;
+
+            @media (min-width:650px) {
+              margin: 10px 0 0 -115px;
+            }
           }
 
           .food-title {
             background: $white;
             border-radius: 0px 26.5935px 26.5935px 26.5935px;
             width: 100%;
+            max-width: 277px;
             height: 157px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: 70%;
+            margin-top: 123px;
 
             & h3 {
               font-size: 14px;
@@ -713,7 +732,6 @@
           cursor: pointer;
           display: flex;
           flex-direction: column;
-          justify-content: center;
           margin: 0 0 21px 0;
           padding: 27px;
           box-shadow: 0px 0px 33px rgba(0, 0, 0, 0.04);
@@ -722,15 +740,16 @@
           height: 224px;
           width: 80%;
           transition: 0.8s;
-          transition-timing-function: ease;
           transition-property: height;
           transition: background-color 0.8s;
+
           @media (min-width: 800px) {
             width: 40%;
           }
 
           @media (min-width: 1600px) {
             width: 17%;
+            margin: 0;
           }
 
           & svg path,
@@ -862,6 +881,7 @@
       }
 
       &__card {
+
         p,
         h5 {
           font-size: 12px;
