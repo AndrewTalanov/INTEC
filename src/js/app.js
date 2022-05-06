@@ -97,6 +97,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
     initialSlide: 1,
   });
 
+  menuDishesSwiper.on('transitionStart', function(e) {
+
+    // для предыдущего слайда
+    e.slides.forEach(item => { 
+      if (item.classList.contains("swiper-slide-prev")) {
+
+        let text = item.textContent || item.innerText;
+        text = text.trim().length;
+
+        if (text < 10) {
+
+          e.slides[e.previousIndex].firstElementChild.style.display = "flex";
+          e.slides[e.previousIndex].firstElementChild.style.justifyContent = "flex-end";
+          
+        }
+      }
+    }) 
+
+    e.slides[e.realIndex].firstElementChild.style.display = "flex";
+    e.slides[e.realIndex].firstElementChild.style.justifyContent = "center";
+
+    // для следующего слайда
+
+    e.slides.forEach(item => { 
+      if (item.classList.contains("swiper-slide-next")) {
+
+        let text = item.textContent || item.innerText;
+        text = text.trim().length;
+
+        if (text < 10) {
+
+          e.slides[e.realIndex + 1].firstElementChild.style.display = "flex";
+          e.slides[e.realIndex + 1].firstElementChild.style.justifyContent = "flex-start";
+          
+        }
+      }
+    }) 
+
+    e.slides[e.realIndex].firstElementChild.style.display = "flex";
+    e.slides[e.realIndex].firstElementChild.style.justifyContent = "center";
+
+  })
+
   new Swiper('.menu-food-slider', {
     initialSlide: 1,
     slidesPerView: 1.8,

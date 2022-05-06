@@ -440,6 +440,7 @@
         &__wrapper {
           &__item {
             .dishes-tab-nav {
+              // display: flex;
               .tab-underline {
                 display: none;
               }
@@ -450,6 +451,7 @@
           .swiper-slide-active {
             .dishes-tab-nav {
               display: flex;
+              
               justify-content: center;
 
               & a {
