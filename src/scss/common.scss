@@ -160,10 +160,19 @@ input:focus {
 
 // фон
 body {
-  background:0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat, 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
-    0 0 / 100% 680px url("@img/content/back1-mobile.png") no-repeat;
-  @media (min-width: 420px) {
-    background:0 100% / 100% 1100px url("@img/content/final-back.png") no-repeat, 0 0 / 100% auto url("@img/content/back2-mobile.png") no-repeat,
-    0 0 / 100% 680px url("@img/content/back1-mobile.png") no-repeat;
+  $height-first-back: 685px;
+
+  background:
+    0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat,
+    0 0 / 100% $height-first-back url("@img/content/back2-mobile.png") no-repeat,
+    -180px 0 / 672px $height-first-back url("@img/content/back-v2.png") no-repeat,
+    0 0 / 100% $height-first-back url("@img/content/back-v1.png") no-repeat;
+
+  @media (min-width: 490px) {
+    background:
+    0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat,
+    0 0 / 100% $height-first-back url("@img/content/back2-mobile.png") no-repeat,
+    100% 0 / 672px $height-first-back url("@img/content/back-v2.png") no-repeat,
+    0 0 / 100% $height-first-back url("@img/content/back-v1.png") no-repeat;
   }
 }

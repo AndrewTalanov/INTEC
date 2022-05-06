@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     navigation: {
       nextEl: '.main-screen__swiper-next',
     },
-    loop: true,
+    loop: true, 
     slidesPerView: 1.3,
     spaceBetween: 10,
     simulateTouch: true,
