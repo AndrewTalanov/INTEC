@@ -468,7 +468,6 @@
           .swiper-slide-active {
             .dishes-tab-nav {
               display: flex;
-
               justify-content: center;
 
               & a {
@@ -525,20 +524,19 @@
         &-content {
           display: flex;
           flex-direction: column;
-          align-items: center;
-
+         
           .food-img {
-            width: 173px;
+            width: 100%;
 
             position: absolute;
             z-index: 2;
 
             @media (min-width:500px) {
-              width: 185px;
+              
             }
 
             @media (min-width:650px) {
-              width: 190px;
+              
             }
           }
 
@@ -756,9 +754,8 @@
           border-radius: 0px 33px 33px 33px;
           height: 224px;
           width: 80%;
-          transition: 0.8s;
           transition-property: height;
-          transition: background-color 0.8s;
+          transition: 0.8s, background-color 0.8s;
 
           @media (min-width: 800px) {
             width: 40%;
