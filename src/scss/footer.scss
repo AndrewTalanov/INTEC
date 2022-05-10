@@ -28,7 +28,7 @@
 
                 & a {
                     color: $white;
-                    font-size: 14px;
+                    font-size: rem(14);
                 }
             }
 
@@ -95,7 +95,7 @@
                 p {
                     color: $white;
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: rem(14);
                 }
 
                 @include breakpoint (md) {
@@ -111,7 +111,7 @@
                 padding: 13px 25px 13px 24px;
                 background-color: $white;
                 color: $black;
-                font-size: 14px;
+                font-size: rem(14);
                 width: 135px;
 
                 @include breakpoint (md) {
