@@ -203,18 +203,23 @@
         @media (min-width: 335px) {
           top: 385px;
         }
+
         @media (min-width: 342px) {
           top: 365px;
         }
+
         @media (min-width: 355px) {
           top: 375px;
         }
+
         @media (min-width: 370px) {
           top: 380px;
         }
+
         @media (min-width: 435px) {
           top: 365px;
         }
+
         @media (min-width: 500px) {
           top: 380px;
         }
@@ -521,69 +526,86 @@
       overflow: hidden;
 
       .food-slider {
-        &-content {
-          display: flex;
-          flex-direction: column;
-         
-          .food-img {
+        &-item {
+          &-content {
             width: 100%;
-
-            position: absolute;
-            z-index: 2;
-
-            @media (min-width:500px) {
-              
-            }
-
-            @media (min-width:650px) {
-              
-            }
-          }
-
-          .btn-slider-menu {
-            visibility: hidden;
-            background: $white;
-            width: 33.98px;
-            height: 33.98px;
-            cursor: pointer;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // position: absolute;
-            // left: 12%;
-            z-index: 3;
-            position: fixed;
-            z-index: 3;
-            margin: 5px 0 0 -105px;
-
-            @media (min-width:650px) {
-              margin: 10px 0 0 -115px;
-            }
-          }
-
-          .food-title {
-            background: $white;
-            border-radius: 0px 26.5935px 26.5935px 26.5935px;
-            width: 100%;
-            max-width: 277px;
-            height: 157px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-            margin-top: 123px;
 
-            & h3 {
-              font-size: 14px;
-              margin-top: 49px;
-              font-weight: 600;
+            .food-img {
+              width: 173px;
+              z-index: 2;
+              margin: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+
+              @media (min-width:500px) {
+                width: 180px;
+              }
+
+              @media (min-width:650px) {
+                width: 190px;
+              }
+
+              @media (min-width:993px) {
+                width: 210px;
+              }
             }
 
-            & p {
-              margin-top: 17px;
-              font-size: 12px;
-              width: 173px;
+            .btn-slider-menu {
+              visibility: hidden;
+              background: $white;
+              width: 33.98px;
+              height: 33.98px;
+              cursor: pointer;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: 3;
+              position: fixed;
+              z-index: 3;
+              margin: 5px 0 0 -105px;
+
+              @media (min-width:650px) {
+                margin: 10px 0 0 -115px;
+              }
+            }
+
+            .food-title {
+              background: $white;
+              border-radius: 0px 26.5935px 26.5935px 26.5935px;
+              width: 100%;
+              max-width: 277px;
+              height: 157px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              margin-top: 123px;
+
+              & h3 {
+                font-size: 14px;
+                margin-top: 49px;
+                font-weight: 600;
+              }
+
+              & p {
+                margin-top: 17px;
+                font-size: 12px;
+                width: 173px;
+              }
+
+              @media (min-width:650px) {
+                margin-top: 129px;
+              }
+
+              @media (min-width:993px) {
+                margin-top: 150px;
+              }
             }
           }
         }
@@ -844,8 +866,16 @@
 
 .section-reviews {
   margin-top: 9.5%;
-
+  @media (min-width: 993px) {
+    margin-top: 4.5%;
+  }
   .reviews {
+    @media (min-width: 993px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
     &__title {
       display: flex;
       flex-direction: column;
@@ -872,20 +902,19 @@
     }
 
     &__body {
+      margin: 39px 0 0 20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: 19px;
     }
 
     &__container {
-      margin-top: 14%;
       position: relative;
+      width: 100%;
       background-color: $white;
       box-shadow: 3.08642px 3.08642px 25.463px rgba(0, 0, 0, 0.08);
-      height: 100%;
-      width: 95%;
       border-radius: 0px 16.9753px 16.9753px 16.9753px;
-      left: 20px;
 
       .human-img {
         position: absolute;
@@ -905,7 +934,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 18px 17px 0px 47px;
-        height: 80%;
+
 
         .card {
           &__signature {
@@ -926,8 +955,15 @@
 .section-feedback {
   margin-top: 21.5%;
   background: 0 0 / cover url("@img/content/back4.png") no-repeat;
+  background-position: center;
   padding: 100px 0;
   position: relative;
+
+  @media (min-width: 650px) {
+    margin-top: 7.5%;
+    background: 0 0 / cover url("@img/content/back-form-desk.png") no-repeat;
+    padding: 131.5px 0;
+  }
 
   img {
     top: -10%;
