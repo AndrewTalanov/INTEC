@@ -866,25 +866,41 @@
 
 .section-reviews {
   margin-top: 9.5%;
+
   @media (min-width: 993px) {
     margin-top: 4.5%;
   }
+
   .reviews {
     @media (min-width: 993px) {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 15px;
     }
+
     &__title {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: flex-start;
+      text-align: start;
 
       h3 {
         font-weight: 400;
         padding: 18px 0 42px 0;
+      }
+
+      @media (min-width: 993px) {
+        padding-top: 89px;
+      }
+
+      @media (min-width: 1440px) {
+        h2 {
+          font-size: 34px;
+        }
+
+        p {
+          font-size: 18px;
+        }
       }
     }
 
@@ -894,7 +910,6 @@
       align-items: center;
       font-weight: 600;
       font-size: 18px;
-      line-height: 121.9%;
 
       & img {
         padding: 0 0 0 8px;
@@ -905,36 +920,84 @@
       margin: 39px 0 0 20px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       gap: 19px;
+
+      @media (min-width:993px) {
+        margin: 0;
+        align-items: flex-end;
+      }
     }
 
     &__container {
       position: relative;
       width: 100%;
+      display: flex;
+      align-items: center;
       background-color: $white;
       box-shadow: 3.08642px 3.08642px 25.463px rgba(0, 0, 0, 0.08);
       border-radius: 0px 16.9753px 16.9753px 16.9753px;
+      z-index: 1;
+
+      @media (min-width:993px) {
+        min-height: 162px;
+        width: 60.4%;
+      }
+
+      @media (min-width:1440px) {
+        width: 51.5%;
+      }
+
+      &.reviews-item-left {
+        @media (min-width:993px) {
+          left: -33px;
+        }
+
+        @media (min-width: 1200px) {
+          left: -54px;
+        }
+
+        @media (min-width: 1440px) {
+          left: -74px;
+        }
+      }
 
       .human-img {
         position: absolute;
         left: -20px;
         top: 13px;
-        max-width: 100%;
+        width: 55px;
+        z-index: 1;
+
+        @media (min-width:993px) {
+          left: -39px;
+          top: 10%;
+          width: 75px;
+        }
+
+        @media (min-width:1200px) {
+          left: -65px;
+          width: 91px;
+        }
       }
 
       &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px 17px 0px 47px;
 
         p,
         h5 {
           font-size: 12px;
         }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 18px 17px 0px 47px;
+        @media (min-width:993px) {
 
+          p,
+          h5 {
+            font-size: 14px;
+          }
+        }
 
         .card {
           &__signature {
@@ -965,11 +1028,20 @@
     padding: 131.5px 0;
   }
 
+  @media (min-width:993px) {
+    margin-top: -2%;
+  }
+
   img {
     top: -10%;
     left: 5%;
     position: absolute;
     width: 110px;
+
+    @media (min-width:993px) {
+      top: -23%;
+      width: 278px;
+    }
   }
 
   .feedback {
