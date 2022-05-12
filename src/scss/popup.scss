@@ -43,12 +43,12 @@
             position: absolute;
             left: 15px;
             content: ' ';
-            height: 24px;
+            height: 32px;
             width: 2px;
             background-color: #333;
 
             @media (min-width: 600px) {
-                height: 20px;
+                height: 24px;
             }
         }
 
