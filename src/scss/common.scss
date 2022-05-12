@@ -65,19 +65,19 @@ $white:#FFFFFF;
 $light-white:#FBF8F8;
 
 //Переменные для адаптива
-@mixin breakpoint($point) {
-  @if $point==md {
-    @media(max-width: 768px) {
-      @content;
-    }
-  }
+// @mixin breakpoint($point) {
+//   @if $point==md {
+//     @media(max-width: 768px) {
+//       @content;
+//     }
+//   }
 
-  @else if $point==xs {
-    @media(max-width: 320px) {
-      @content;
-    }
-  }
-}
+//   @else if $point==xs {
+//     @media(max-width: 320px) {
+//       @content;
+//     }
+//   }
+// }
 
 .btn-slider-prev,
 .btn-slider-next {
@@ -86,7 +86,7 @@ $light-white:#FBF8F8;
   cursor: pointer;
   border-radius: 50%;
   border: none;
-  z-index: 99;
+  z-index: 9;
   transition: 0.3s ease;
 }
 
@@ -112,9 +112,11 @@ $light-white:#FBF8F8;
 
 .link {
   display: inline-block;
-  padding: 15px 55px;
+  // padding: 15px 55px;
+  padding: 12px 44px;
   text-decoration: none;
   color: white;
+  box-shadow: 0px 0px 16px rgba(255, 119, 20, 0.44);
   font-weight: 600;
   background-color: $orange;
   border-radius: 0 24px 24px 24px;
@@ -125,6 +127,7 @@ $light-white:#FBF8F8;
 .link-alternative {
   background-color: $white;
   color: $green;
+  box-shadow: none;
 }
 
 // элементы формы
@@ -150,6 +153,7 @@ $light-white:#FBF8F8;
     padding: 0 5px;
     background: $white;
     font-weight: 600;
+
     @media (min-width: 460px) {
       left: 15px;
     }
@@ -173,9 +177,9 @@ body {
 
   @media (min-width: 490px) {
     background:
-    0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat,
-    0 0 / 100% $height-first-back url("@img/content/back2-mobile.png") no-repeat,
-    100% 0 / 672px $height-first-back url("@img/content/back-v2.png") no-repeat,
-    0 0 / 100% $height-first-back url("@img/content/back-v1.png") no-repeat;
+      0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat,
+      0 0 / 100% $height-first-back url("@img/content/back2-mobile.png") no-repeat,
+      100% 0 / 672px $height-first-back url("@img/content/back-v2.png") no-repeat,
+      0 0 / 100% $height-first-back url("@img/content/back-v1.png") no-repeat;
   }
 }

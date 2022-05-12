@@ -3,17 +3,17 @@
     backdrop-filter: blur(33px);
 
     &__container {
-        @include breakpoint (md) {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
 
         &__menu {
-            @include breakpoint (md) {
-                display: flex;
-                flex-direction: column;
-            }
+
+            display: flex;
+            flex-direction: column;
+
 
             .menu__list {
                 display: flex;
@@ -73,13 +73,13 @@
         &__address {
             font-style: normal;
 
-            @include breakpoint (md) {
-                display: flex;
-                flex-direction: column;
-                margin-top: 5px;
-                justify-content: space-between;
-                border-bottom: 1px solid #777E89;
-            }
+
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+            justify-content: space-between;
+            border-bottom: 1px solid #777E89;
+
 
             .address-location,
             .address-email,
@@ -98,9 +98,9 @@
                     font-size: rem(14);
                 }
 
-                @include breakpoint (md) {
-                    margin: 20px 0 0 0;
-                }
+
+                margin: 20px 0 0 0;
+
             }
 
             .address-email a {
@@ -114,31 +114,31 @@
                 font-size: rem(14);
                 width: 135px;
 
-                @include breakpoint (md) {
-                    margin: 20px 0 20px 0;
-                }
+
+                margin: 20px 0 20px 0;
+
 
             }
         }
 
         &__logo {
 
-            @include breakpoint (md) {
-                display: flex;
-                flex-direction: column;
-                margin: 25px 0 0 0;
 
-                & img {
-                    max-width: 100px;
-                }
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0 0 0;
+
+            & img {
+                max-width: 100px;
             }
+
 
             .footer-copyright {
                 color: #BBBBBB;
 
-                @include breakpoint (md) {
-                    margin: 16px 0 39px 0;
-                }
+
+                margin: 16px 0 39px 0;
+
             }
         }
     }
