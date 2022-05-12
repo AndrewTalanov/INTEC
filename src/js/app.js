@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     navigation: {
       nextEl: '.main-screen__swiper-next',
     },
-    loop: true, 
+    loop: true,
     slidesPerView: 1.3,
     spaceBetween: 10,
     simulateTouch: true,
@@ -97,12 +97,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     initialSlide: 1,
     breakpoints: {
       '500': {
-        spaceBetween: 30,  
+        spaceBetween: 30,
         slidesPerView: 2.3,
       },
-      
+
     }
-    
+
   });
 
   menuDishesSwiper.on('transitionStart', function (e) {
@@ -163,11 +163,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         spaceBetween: 10,
         slidesPerView: 2,
       },
-      '600': {  
+      '600': {
         spaceBetween: 5,
         slidesPerView: 2,
       },
-      '768': {  
+      '768': {
         slidesPerView: 2.1,
       },
     }
@@ -218,5 +218,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
   phoneMask.forEach(item => {
     let mask = IMask(item, maskOptions);
   });
+
+  //Добавления эффекта размытия при скролле для header
+  let className = "scrolled";
+  let scrollTrigger = 65;
+
+  window.onscroll = function () {
+    if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+      document.getElementsByTagName("header")[0].classList.add(className);
+    } else {
+      document.getElementsByTagName("header")[0].classList.remove(className);
+    }
+  };
 
 });
