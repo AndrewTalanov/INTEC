@@ -701,13 +701,34 @@
 }
 
 .section-about-company {
-  padding: 95px 0 0 0;
+  margin-top: 95px;
+  padding: 0 0 55px 0;
+  background: 0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
+  @media (min-width: 1200px) {
+    padding: 320px 0 200px 0;
+    background: 
+      98% 40% / auto auto url("@img/content/about-company-desktop.png") no-repeat,
+      0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
+  }
+  @media (min-width: 1300px) {
+    background: 
+      90% 40% / auto auto url("@img/content/about-company-desktop.png") no-repeat,
+      0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
+  }
+  @media (min-width: 1500px) {
+    background: 
+      80% 40% / auto auto url("@img/content/about-company-desktop.png") no-repeat,
+      0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
+  }
 
   .about-company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__preview {
-      display: flex;
-      justify-content: center;
-
+      @media (min-width: 1200px) {
+        display: none;
+      }
       img {
         width: 100%;
 
@@ -719,7 +740,9 @@
 
     &__title {
       margin-top: 25px;
-
+      @media (min-width: 1200px) {
+        align-self: flex-start;
+      }
       h2 {
         font-size: rem(24);
         font-weight: 700;
@@ -733,21 +756,31 @@
     &__description {
       margin: 12px 0 35px 0;
       max-width: 545px;
-
+      @media (min-width: 1200px) {
+        align-self: flex-start;
+      }
       p {
+        text-align: center;
         font-weight: 400;
         font-size: rem(14);
 
         @media (min-width: 768px) {
           font-size: rem(16);
         }
+        @media (min-width: 1200px) {
+          text-align: start;
+        }
+      }
+    }
+    .link {
+      @media (min-width: 1200px) {
+        align-self: flex-start;
       }
     }
   }
 }
 
 .section-form-call {
-  margin-top: 55px;
   padding: 46px 0;
   background: 0 0 / cover url("@img/content/back3.png") no-repeat;
 
