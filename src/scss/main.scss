@@ -15,13 +15,15 @@
       100% 0 / 672px $height-mobile-back url("@img/content/back-v2.png") no-repeat,
       0 0 / 100% $height-mobile-back url("@img/content/back-v1.png") no-repeat;
   }
+
   @media (min-width: 768px) {
     padding: 130px 0 100px 0;
     background:
-    0 0 / 100% $height-desktop-back url("@img/content/back2-mobile.png") no-repeat,
+      0 0 / 100% $height-desktop-back url("@img/content/back2-mobile.png") no-repeat,
       100% 100% / 1031px auto url("@img/content/back-v3.png") no-repeat,
       0 0 / 100% $height-desktop-back url("@img/content/back-v1.png") no-repeat;
   }
+
   @media (min-width: 1200px) {
     padding: 200px 0 200px 0;
     background:
@@ -29,13 +31,14 @@
       100% 100% / 1031px auto url("@img/content/back-v3.png") no-repeat,
       0 0 / 100% $height-desktop-back url("@img/content/back-v1.png") no-repeat;
   }
+
   @media (min-width: 1440px) {
     background:
       // 0 0 / 100% $height-desktop-back url("@img/content/back2-mobile.png") no-repeat,
       100% 100% / 1031px auto url("@img/content/back-v3.png") no-repeat,
       0 0 / 100% $height-desktop-back url("@img/content/back-v1.png") no-repeat;
   }
-  
+
   .main-screen {
     &__location {
       display: flex;
@@ -48,7 +51,7 @@
       p {
         font-size: rem(17);
       }
-      
+
     }
 
     &__title {
@@ -57,6 +60,7 @@
       h1 {
         font-size: rem(28);
         font-weight: 700;
+
         @media (min-width: 768px) {
           font-size: rem(40);
         }
@@ -108,6 +112,7 @@
             @media (min-width: 500px) {
               padding: 10px 10px;
             }
+
             @media (min-width: 768px) {
               top: -60px;
             }
@@ -121,6 +126,7 @@
               font-size: rem(13);
               font-weight: 600;
               margin: 0 auto 0 10px;
+
               @media (min-width: 768px) {
                 font-size: rem(14);
               }
@@ -145,6 +151,7 @@
     &__title {
       h2 {
         line-height: 29px;
+
         @media (min-width: 768px) {
           line-height: normal;
           font-size: rem(40);
@@ -503,6 +510,7 @@
   .type-dishes {
     &-title {
       text-align: center;
+
       h2 {
         font-size: rem(30);
       }
@@ -576,6 +584,12 @@
   .menu-food-container {
     width: 100%;
     margin-top: 23px;
+
+    .sliders {
+      &-item {
+        display: none;
+      }
+    }
 
     .menu-food-slider {
       position: relative;
@@ -709,6 +723,7 @@
       h2 {
         font-size: rem(24);
         font-weight: 700;
+
         @media (min-width: 768px) {
           font-size: rem(30);
         }
@@ -718,9 +733,11 @@
     &__description {
       margin: 12px 0 35px 0;
       max-width: 545px;
+
       p {
         font-weight: 400;
         font-size: rem(14);
+
         @media (min-width: 768px) {
           font-size: rem(16);
         }
@@ -752,6 +769,7 @@
         h2 {
           font-weight: 700;
           font-size: rem(16);
+
           @media (min-width: 768px) {
             font-size: rem(30);
           }
@@ -764,6 +782,7 @@
         p {
           font-weight: 400;
           font-size: rem(13);
+
           @media (min-width: 768px) {
             font-size: rem(14);
           }
@@ -798,6 +817,7 @@
     .instruction {
       &__title {
         text-align: center;
+
         h2 {
           @media (min-width: 768px) {
             font-size: rem(30);
@@ -810,7 +830,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+  
         .tab-dots {
           display: none;
         }
@@ -956,14 +976,17 @@
       flex-direction: column;
       justify-content: space-between;
       text-align: start;
+
       h2 {
         @media (min-width: 768px) {
           font-size: rem(30);
         }
       }
+
       h3 {
         font-weight: 400;
         padding: 18px 0 42px 0;
+
         @media (min-width: 768px) {
           font-size: rem(16);
         }
@@ -1133,6 +1156,7 @@
     &__title {
       h2 {
         color: white;
+
         @media (min-width: 768px) {
           font-size: rem(30);
         }
@@ -1158,6 +1182,7 @@
   .interesting-articles {
     &__title {
       text-align: center;
+
       h2 {
         @media (min-width: 768px) {
           font-size: rem(30);
@@ -1268,6 +1293,7 @@
       h2 {
         font-weight: 800;
         font-size: rem(24);
+
         @media (min-width: 768px) {
           font-size: rem(40);
         }
@@ -1318,10 +1344,3 @@
     }
   }
 }
-
-.sliders {
-  &-item {
-    display: none;
-  }
-}
-// .

@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
-
     scrollSite();
   });
 
