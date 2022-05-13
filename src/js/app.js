@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     } else {
       document.getElementsByTagName("header")[0].classList.remove(className);
     }
+    
   };
 
 });

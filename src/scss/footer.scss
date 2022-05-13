@@ -10,12 +10,10 @@
 
 
         &__menu {
-
             display: flex;
             flex-direction: column;
 
-
-            .menu__list {
+            .menu__list-footer {
                 display: flex;
                 flex-wrap: wrap;
                 list-style: none;
