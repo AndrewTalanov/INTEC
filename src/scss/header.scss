@@ -324,14 +324,22 @@
         background: $white;
         transform: translateY(-335vh);
         transition: transform 0.5s;
-
         touch-action: none;
         -ms-touch-action: none;
+
+        @media (min-width: 768px) {
+            width: 40%;
+            transform: translateX(-335vh);
+        }
 
         &.active {
             transform: translateY(0);
             z-index: 995;
             backdrop-filter: none;
+            
+            @media (min-width: 768px) {
+                transform: translateX(0);
+            }
         }
 
     }

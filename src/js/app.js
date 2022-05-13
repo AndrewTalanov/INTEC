@@ -228,8 +228,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.getElementsByTagName("header")[0].classList.add(className);
     } else {
       document.getElementsByTagName("header")[0].classList.remove(className);
-    }
-    
+    }  
   };
 
 });
