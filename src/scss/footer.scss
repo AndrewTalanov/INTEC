@@ -11,29 +11,61 @@
             display: flex;
             flex-direction: column;
 
+            @media (min-width: 500px) {
+                align-items: center;
+            }
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                align-items: baseline;
+            }
+
+            @media (min-width: 1200px) {
+                gap: 64px;
+            }
+
             .menu__list-footer {
                 display: flex;
                 flex-wrap: wrap;
                 list-style: none;
                 padding: 0;
-                margin: 0;
-
-                & li {
-                    padding: 16px 20px 0 0px;
-                }
+                gap: 30px;
 
                 & a {
                     color: $white;
                     font-size: rem(14);
+                }
+
+                @media (min-width: 500px) {
+                    gap: 14px;
+                }
+
+                @media (min-width: 768px) {
+                    width: 100%;
+                    gap: 30px;
+                }
+
+                @media (min-width: 1200px) {
+                    gap: 0;
+                    justify-content: space-between;
                 }
             }
 
             .menu__search {
                 margin-top: 24px;
 
+                @media (min-width: 500px) {
+                    width: 75%;
+                }
+
                 & form {
                     position: relative;
-                    width: 93%;
+                    width: 97.4%;
+
+                    @media (min-width: 768px) {
+                        width: 94.4%;
+                    }
+
                 }
 
                 & input,
@@ -68,13 +100,20 @@
 
         &__address {
             font-style: normal;
-
-
             display: flex;
             flex-direction: column;
-            margin-top: 5px;
+            padding: 25px 0 31px 0;
             justify-content: space-between;
             border-bottom: 1px solid #777E89;
+            gap: 20px;
+
+            @media (min-width: 500px) {
+                align-items: center;
+            }
+
+            @media (min-width: 1200px) {
+                flex-direction: row;
+            }
 
             .address-location,
             .address-email,
@@ -93,30 +132,70 @@
                     font-size: rem(14);
                 }
 
-                margin: 20px 0 0 0;
+
+            }
+
+            .address-phone {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                @media (min-width: 1200px) {
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 29px;
+                }
+
+                &-number {
+                    display: flex;
+                    align-items: center;
+
+                    & a {
+                        font-weight: 700;
+                        font-size: rem(16);
+                    }
+                }
+
+                &-require-link {
+                    padding-top: 20px;
+
+                    @media (min-width: 1200px) {
+                        padding: 0;
+                    }
+
+                    .link {
+                        padding: 13px 25px 13px 24px;
+                        background-color: $white;
+                        color: $black;
+                        font-size: rem(14);
+                        box-shadow: none;
+                        font-weight: 600;
+
+                    }
+                }
             }
 
             .address-email a {
                 text-decoration: underline;
             }
 
-            .link {
-                padding: 13px 25px 13px 24px;
-                background-color: $white;
-                color: $black;
-                font-size: rem(14);
-                width: 135px;
-                margin: 20px 0 20px 0;
-            }
+
+
         }
 
         &__logo {
             display: flex;
             flex-direction: column;
             margin: 25px 0 0 0;
+            align-items: baseline;
 
             & img {
                 max-width: 100px;
+            }
+
+            @media (min-width: 768px) {
+                justify-content: space-between;
+                flex-direction: row-reverse;
             }
 
             .footer-copyright {
