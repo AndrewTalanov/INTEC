@@ -1326,14 +1326,12 @@
   position: relative;
   background: rgba($color: #000000, $alpha: 0.28);
 
-  .test-back {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-  }
-
   .calculator {
     padding: 70px 0 50px 0;
+    max-width: 551px;
+    @media (min-width: 768px) {
+      padding: 96px 0 50px 0;
+    }
 
     h2,
     p {
@@ -1363,13 +1361,36 @@
 
     &__form {
       margin-top: 20px;
-
+      display: flex;
+      flex-wrap: wrap;
+      @media ( min-width: 768px) {
+        .input {
+          input {
+            width: 100%;  
+          }
+          select {
+            margin-left: 50px;
+            width: 100%;
+          }
+        }
+        .input-order-1 {
+          width: 157px;
+        }
+        .input-order-2 {
+          width: 202px;
+          .input-label {
+            left: 60px;
+          }
+        }
+        .input-order-3 {
+          width: 380px;
+        }
+      }
       .input {
         margin-top: 15px;
-
         &-alt {
           border: 1px solid #ffffff;
-          background-color: #000000;
+          background-color: inherit;
           color: #a2a5af;
         }
 
