@@ -14,6 +14,9 @@ p {
 html {
   min-width: 320px;
   font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: 18px; 
+  }
 }
 
 html,
@@ -122,6 +125,7 @@ $light-white:#FBF8F8;
   border-radius: 0 24px 24px 24px;
   border: none;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .link-alternative {
@@ -167,19 +171,6 @@ input:focus {
 
 // фон
 body {
-  $height-first-back: 685px;
-
   background:
-    0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat,
-    0 0 / 100% $height-first-back url("@img/content/back2-mobile.png") no-repeat,
-    -180px 0 / 672px $height-first-back url("@img/content/back-v2.png") no-repeat,
-    0 0 / 100% $height-first-back url("@img/content/back-v1.png") no-repeat;
-
-  @media (min-width: 490px) {
-    background:
-      0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat,
-      0 0 / 100% $height-first-back url("@img/content/back2-mobile.png") no-repeat,
-      100% 0 / 672px $height-first-back url("@img/content/back-v2.png") no-repeat,
-      0 0 / 100% $height-first-back url("@img/content/back-v1.png") no-repeat;
-  }
+    0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
 }

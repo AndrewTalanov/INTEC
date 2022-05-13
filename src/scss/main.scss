@@ -1,6 +1,41 @@
 .section-main-screen {
+  $height-mobile-back: 685px;
+  $height-desktop-back: 1039px;
+
   padding: 115px 0 0 0;
 
+  background:
+    0 0 / 100% $height-mobile-back url("@img/content/back2-mobile.png") no-repeat,
+    -180px 0 / 672px $height-mobile-back url("@img/content/back-v2.png") no-repeat,
+    0 0 / 100% $height-mobile-back url("@img/content/back-v1.png") no-repeat;
+
+  @media (min-width: 490px) {
+    background:
+      0 0 / 100% $height-mobile-back url("@img/content/back2-mobile.png") no-repeat,
+      100% 0 / 672px $height-mobile-back url("@img/content/back-v2.png") no-repeat,
+      0 0 / 100% $height-mobile-back url("@img/content/back-v1.png") no-repeat;
+  }
+  @media (min-width: 768px) {
+    padding: 130px 0 100px 0;
+    background:
+    0 0 / 100% $height-desktop-back url("@img/content/back2-mobile.png") no-repeat,
+      100% 100% / 1031px auto url("@img/content/back-v3.png") no-repeat,
+      0 0 / 100% $height-desktop-back url("@img/content/back-v1.png") no-repeat;
+  }
+  @media (min-width: 1200px) {
+    padding: 200px 0 200px 0;
+    background:
+      0 0 / 100% $height-desktop-back url("@img/content/back2-mobile.png") no-repeat,
+      100% 100% / 1031px auto url("@img/content/back-v3.png") no-repeat,
+      0 0 / 100% $height-desktop-back url("@img/content/back-v1.png") no-repeat;
+  }
+  @media (min-width: 1440px) {
+    background:
+      // 0 0 / 100% $height-desktop-back url("@img/content/back2-mobile.png") no-repeat,
+      100% 100% / 1031px auto url("@img/content/back-v3.png") no-repeat,
+      0 0 / 100% $height-desktop-back url("@img/content/back-v1.png") no-repeat;
+  }
+  
   .main-screen {
     &__location {
       display: flex;
@@ -11,16 +46,20 @@
       }
 
       p {
-        font-size: 17px;
+        font-size: rem(17);
       }
+      
     }
 
     &__title {
       margin-top: 25px;
 
       h1 {
-        font-size: 28px;
+        font-size: rem(28);
         font-weight: 700;
+        @media (min-width: 768px) {
+          font-size: rem(40);
+        }
       }
     }
 
@@ -34,6 +73,7 @@
       overflow: hidden;
       margin: 60px 0 0 0;
       width: 90%;
+      max-width: 1150px;
 
       &-prev,
       &-next {
@@ -67,7 +107,9 @@
 
             @media (min-width: 500px) {
               padding: 10px 10px;
-              top: -50px;
+            }
+            @media (min-width: 768px) {
+              top: -60px;
             }
 
             img {
@@ -76,9 +118,12 @@
             }
 
             p {
-              font-size: 13px;
+              font-size: rem(13);
               font-weight: 600;
               margin: 0 auto 0 10px;
+              @media (min-width: 768px) {
+                font-size: rem(14);
+              }
             }
 
             :first-child {
@@ -98,11 +143,18 @@
 
   .popular-dishes {
     &__title {
-      line-height: 29px;
+      h2 {
+        line-height: 29px;
+        @media (min-width: 768px) {
+          line-height: normal;
+          font-size: rem(40);
+        }
+      }
     }
 
     &__description {
       margin: 15px 0 26px 0;
+      max-width: 458px;
     }
 
     &__swiper {
@@ -399,7 +451,7 @@
 
               &__title {
                 h3 {
-                  font-size: 16px;
+                  font-size: rem(16);
                 }
               }
 
@@ -407,7 +459,7 @@
                 width: 80%;
 
                 p {
-                  font-size: 14px;
+                  font-size: rem(14);
                   margin: 10px 0;
                 }
               }
@@ -422,7 +474,7 @@
 
               &__link {
                 a {
-                  font-size: 14px;
+                  font-size: rem(14);
                   color: $black;
                   font-weight: 600;
 
@@ -451,6 +503,9 @@
   .type-dishes {
     &-title {
       text-align: center;
+      h2 {
+        font-size: rem(30);
+      }
     }
 
     &-slider {
@@ -589,14 +644,14 @@
               margin-top: 123px;
 
               & h3 {
-                font-size: 14px;
+                font-size: rem(14);
                 margin-top: 49px;
                 font-weight: 600;
               }
 
               & p {
                 margin-top: 17px;
-                font-size: 12px;
+                font-size: rem(12);
                 width: 173px;
               }
 
@@ -652,17 +707,23 @@
       margin-top: 25px;
 
       h2 {
-        font-size: 24px;
+        font-size: rem(24);
         font-weight: 700;
+        @media (min-width: 768px) {
+          font-size: rem(30);
+        }
       }
     }
 
     &__description {
       margin: 12px 0 35px 0;
-
+      max-width: 545px;
       p {
         font-weight: 400;
-        font-size: 14px;
+        font-size: rem(14);
+        @media (min-width: 768px) {
+          font-size: rem(16);
+        }
       }
     }
   }
@@ -690,7 +751,10 @@
       &__title {
         h2 {
           font-weight: 700;
-          font-size: 16px;
+          font-size: rem(16);
+          @media (min-width: 768px) {
+            font-size: rem(30);
+          }
         }
       }
 
@@ -699,7 +763,10 @@
 
         p {
           font-weight: 400;
-          font-size: 13px;
+          font-size: rem(13);
+          @media (min-width: 768px) {
+            font-size: rem(14);
+          }
         }
       }
 
@@ -713,7 +780,7 @@
 
       &__conf {
         font-weight: 500;
-        font-size: 11px;
+        font-size: rem(11);
 
         span {
           text-decoration: underline;
@@ -731,6 +798,11 @@
     .instruction {
       &__title {
         text-align: center;
+        h2 {
+          @media (min-width: 768px) {
+            font-size: rem(30);
+          }
+        }
       }
 
       &__tabs-container {
@@ -815,7 +887,7 @@
           }
 
           p {
-            font-size: 14px;
+            font-size: rem(14);
             font-weight: 400;
           }
 
@@ -884,10 +956,17 @@
       flex-direction: column;
       justify-content: space-between;
       text-align: start;
-
+      h2 {
+        @media (min-width: 768px) {
+          font-size: rem(30);
+        }
+      }
       h3 {
         font-weight: 400;
         padding: 18px 0 42px 0;
+        @media (min-width: 768px) {
+          font-size: rem(16);
+        }
       }
 
       @media (min-width: 993px) {
@@ -896,11 +975,11 @@
 
       @media (min-width: 1440px) {
         h2 {
-          font-size: 34px;
+          font-size: rem(34);
         }
 
         p {
-          font-size: 18px;
+          font-size: rem(18);
         }
       }
     }
@@ -910,7 +989,7 @@
       display: flex;
       align-items: center;
       font-weight: 600;
-      font-size: 18px;
+      font-size: rem(18);
 
       & img {
         padding: 0 0 0 8px;
@@ -989,14 +1068,14 @@
 
         p,
         h5 {
-          font-size: 12px;
+          font-size: rem(12);
         }
 
         @media (min-width:993px) {
 
           p,
           h5 {
-            font-size: 14px;
+            font-size: rem(14);
           }
         }
 
@@ -1054,7 +1133,9 @@
     &__title {
       h2 {
         color: white;
-        line-height: 29px;
+        @media (min-width: 768px) {
+          font-size: rem(30);
+        }
       }
     }
 
@@ -1077,6 +1158,11 @@
   .interesting-articles {
     &__title {
       text-align: center;
+      h2 {
+        @media (min-width: 768px) {
+          font-size: rem(30);
+        }
+      }
     }
 
     &__cards {
@@ -1149,7 +1235,7 @@
       & a {
         display: flex;
         font-weight: 700;
-        font-size: 18px;
+        font-size: rem(18);
 
         & img {
           padding-left: 9px;
@@ -1181,7 +1267,10 @@
     &__title {
       h2 {
         font-weight: 800;
-        font-size: 24px;
+        font-size: rem(24);
+        @media (min-width: 768px) {
+          font-size: rem(40);
+        }
       }
     }
 
@@ -1214,7 +1303,7 @@
 
         &-date {
           width: 40%;
-          font-size: 14px;
+          font-size: rem(14);
         }
 
         &-select {
@@ -1224,7 +1313,7 @@
       }
 
       .link {
-        margin-top: 25px;
+        margin-top: rem(25);
       }
     }
   }
