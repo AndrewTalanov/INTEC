@@ -1187,18 +1187,21 @@
     align-items: center;
 
     &__title {
+      max-width: 580px;
       h2 {
         color: white;
-
         @media (min-width: 768px) {
           font-size: rem(30);
+          br {
+            display: none;
+          }
         }
       }
     }
 
     &__description {
       margin: 10px 0 20px 0;
-
+      max-width: 630px;
       p {
         color: white;
         font-weight: 400;
