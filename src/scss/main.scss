@@ -257,7 +257,6 @@
         z-index: 1;
         position: absolute;
         top: 380px;
-        // bottom: 27%;
         right: 6%;
 
         @media (min-width: 335px) {
@@ -704,19 +703,22 @@
   margin-top: 95px;
   padding: 0 0 55px 0;
   background: 0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
+
   @media (min-width: 1200px) {
     padding: 320px 0 200px 0;
-    background: 
+    background:
       98% 40% / auto auto url("@img/content/about-company-desktop.png") no-repeat,
       0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
   }
+
   @media (min-width: 1300px) {
-    background: 
+    background:
       90% 40% / auto auto url("@img/content/about-company-desktop.png") no-repeat,
       0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
   }
+
   @media (min-width: 1500px) {
-    background: 
+    background:
       80% 40% / auto auto url("@img/content/about-company-desktop.png") no-repeat,
       0 100% / 100% 80% url("@img/content/about-company-back.png") no-repeat;
   }
@@ -725,10 +727,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &__preview {
       @media (min-width: 1200px) {
         display: none;
       }
+
       img {
         width: 100%;
 
@@ -740,9 +744,11 @@
 
     &__title {
       margin-top: 25px;
+
       @media (min-width: 1200px) {
         align-self: flex-start;
       }
+
       h2 {
         font-size: rem(24);
         font-weight: 700;
@@ -756,9 +762,11 @@
     &__description {
       margin: 12px 0 35px 0;
       max-width: 545px;
+
       @media (min-width: 1200px) {
         align-self: flex-start;
       }
+
       p {
         text-align: center;
         font-weight: 400;
@@ -767,11 +775,13 @@
         @media (min-width: 768px) {
           font-size: rem(16);
         }
+
         @media (min-width: 1200px) {
           text-align: start;
         }
       }
     }
+
     .link {
       @media (min-width: 1200px) {
         align-self: flex-start;
@@ -783,19 +793,23 @@
 .section-form-call {
   padding: 46px 0;
   background: 0 0 / cover url("@img/content/back3.png") no-repeat;
+
   @media (min-width: 1200px) {
     background: 0 0 / 100% 596px url("@img/content/block-9-back.png") no-repeat;
   }
+
   .wrapper {
     .form-call {
       box-shadow: 0 0 250px rgba($color: #000000, $alpha: .16);
       max-width: 585px;
       background-color: white;
       border-radius: 25px;
+
       @media (min-width: 768px) {
         padding: 80px 0;
         border-radius: 50px;
       }
+
       &__inner {
         display: flex;
         flex-direction: column;
@@ -819,6 +833,7 @@
       &__description {
         margin: 13px 0 15px 0;
         max-width: 430px;
+
         p {
           font-weight: 400;
           font-size: rem(13);
@@ -836,6 +851,7 @@
 
       .link {
         margin: 20px 0;
+
         @media (min-width: 768px) {
           margin: 30px 0 25px 0;
           padding: 14px 56px;
@@ -846,9 +862,11 @@
         font-weight: 500;
         font-size: rem(11);
         max-width: 290px;
+
         @media (min-width: 768px) {
           font-size: rem(12);
         }
+
         span {
           text-decoration: underline;
           font-weight: 600;
@@ -878,7 +896,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-  
+
         .tab-dots {
           display: none;
         }
@@ -1203,10 +1221,13 @@
 
     &__title {
       max-width: 580px;
+
       h2 {
         color: white;
+
         @media (min-width: 768px) {
           font-size: rem(30);
+
           br {
             display: none;
           }
@@ -1217,6 +1238,7 @@
     &__description {
       margin: 10px 0 20px 0;
       max-width: 630px;
+
       p {
         color: white;
         font-weight: 400;
@@ -1226,100 +1248,155 @@
   }
 }
 
-//НАДО ПРИВЕСТИ В АДЕКВАТНЫЙ ВИД ЭТО ВСЕ
 .section-interesting-articles {
-  margin-top: 19%;
+  margin-top: 60px;
 
   .interesting-articles {
+    // .interesting-articles__title
+
     &__title {
       text-align: center;
 
-      h2 {
-        @media (min-width: 768px) {
-          font-size: rem(30);
-        }
+      @media (min-width: 1200px) {
+        text-align: left;
+        font-size: rem(30);
       }
     }
 
-    &__cards {
-      margin-top: 8%;
-      height: 150px;
+    // .interesting-articles__container
 
-      .blog-card {
-        display: flex;
-        flex-direction: column;
-        min-width: 100%;
-        min-height: 132px;
-
-        @media (min-width: 500px) {
-          height: 160px;
-        }
-
-        &.bg-1 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-            0 0 / cover url("@img/content/articles-item-bg1.png");
-          border-radius: 10px;
-        }
-
-        &.bg-2 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-            0 0 / cover url("@img/content/articles-item-bg2.png");
-          border-radius: 10px;
-        }
-
-        &.bg-3 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-            0 0 / cover url("@img/content/articles-item-bg3.png");
-          border-radius: 10px;
-        }
-
-        &.bg-4 {
-          background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-            0 0 / cover url("@img/content/articles-item-bg4.png");
-          border-radius: 10px;
-        }
-
-        .card-content {
-          padding: 24px 34px 29px 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          position: relative;
-          height: 100%;
-
-          & p,
-          h3 {
-            color: $white;
-          }
-
-          & h3 {
-            padding-top: 8px;
-          }
-        }
-      }
-    }
-
-    &__all-link {
+    &__container {
+      padding-top: 23px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      gap: 14px;
 
-      @media (min-width: 500px) {
-        margin-top: 25px;
+      @media (min-width: 600px) {
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 59vh;
+      }
+    }
+
+    // .interesting-articles__container-item
+
+    &__container-item {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      width: 100%;
+      height: 132px;
+      justify-content: flex-start;
+
+      @media (min-width: 600px) {
+        height: 100%;
+        align-items: flex-end;
+
+        &.item-left-top {
+          grid-row: 1 / 3;
+          grid-column: 1 / 3;
+        }
+
+        &.item-right {
+          grid-row: 1/4;
+          grid-column: 3 / 4;
+          align-items: flex-end;
+        }
       }
 
-      & a {
-        display: flex;
-        font-weight: 700;
-        font-size: rem(18);
 
-        & img {
-          padding-left: 9px;
+
+      &.bg-1 {
+        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+          0 0 / cover url("@img/content/articles-item-bg1.png") no-repeat;
+
+        @media (min-width: 768px) {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.67) 93.23%),
+            0 0 / cover url("@img/content/articles-bg-desk1.png") no-repeat;
         }
+      }
+
+      &.bg-2 {
+        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+          0 0 / cover url("@img/content/articles-item-bg2.png");
+
+        @media (min-width: 768px) {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.74) 57.87%),
+            0 0 / cover url("@img/content/articles-bg-desk2.png") no-repeat;
+        }
+      }
+
+      &.bg-3 {
+        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+          0 0 / cover url("@img/content/articles-item-bg3.png");
+
+        @media (min-width: 768px) {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.74) 57.87%),
+            0 0 / cover url("@img/content/articles-bg-desk3.png") no-repeat;
+        }
+      }
+
+      &.bg-4 {
+        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+          0 0 / cover url("@img/content/articles-item-bg4.png");
+
+        @media (min-width: 768px) {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.63%, rgba(0, 0, 0, 0.74) 84.96%),
+            0 0 / cover url("@img/content/articles-bg-desk4.png") no-repeat;
+        }
+      }
+
+      .item-card-link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+     
+        @media (min-width: 993px) {
+          align-items: flex-end;
+        }
+      }
+
+      .item-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 24px;
+        gap: 8px;
+
+        & h3,
+        p {
+          color: $white;
+        }
+
+        @media (min-width: 993px) {
+          margin-bottom: 42px;
+          padding: 0 0 0 55px;
+        }
+      }
+    }
+
+    .link-all-articles {
+      margin: 23px 0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: rem(18);
+
+      & img {
+        padding-left: 9px;
+      }
+
+      @media (min-width: 1200px) {
+        justify-content: end;
+        margin: 35px 0 0 0;
       }
     }
   }
 }
+
 
 .section-calculator {
   margin-top: 20.5%;
@@ -1329,6 +1406,7 @@
   .calculator {
     padding: 70px 0 50px 0;
     max-width: 551px;
+
     @media (min-width: 768px) {
       padding: 96px 0 50px 0;
     }
@@ -1363,31 +1441,39 @@
       margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
-      @media ( min-width: 768px) {
+
+      @media (min-width: 768px) {
         .input {
           input {
-            width: 100%;  
+            width: 100%;
           }
+
           select {
             margin-left: 50px;
             width: 100%;
           }
         }
+
         .input-order-1 {
           width: 157px;
         }
+
         .input-order-2 {
           width: 202px;
+
           .input-label {
             left: 60px;
           }
         }
+
         .input-order-3 {
           width: 380px;
         }
       }
+
       .input {
         margin-top: 15px;
+
         &-alt {
           border: 1px solid #ffffff;
           background-color: inherit;
