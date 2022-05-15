@@ -965,7 +965,7 @@
             visibility: hidden;
           }
 
-          &:hover {
+          &:hover, &:active {
             height: 264px;
             background-color: $orange;
             transition: 0.7s;
