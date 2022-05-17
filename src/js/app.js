@@ -167,7 +167,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         slidesPerView: 2,
       },
       '768': {
-        slidesPerView: 2.1,
+        slidesPerView: 2.5,
+      },
+      '993': {
+        slidesPerView: 2.8,
       },
     }
   });
