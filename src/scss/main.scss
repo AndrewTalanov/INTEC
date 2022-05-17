@@ -170,140 +170,32 @@
       width: 100%;
       background: right top / 70% 55% url("@img/content/BG.png") no-repeat;
 
-      @media (min-width: 370px) {
-        height: 670px;
-      }
-
-      @media (min-width: 380px) {
-        height: 690px;
-      }
-
-      @media (min-width: 400px) {
-        height: 740px;
-      }
-
-      @media (min-width: 415px) {
-        height: 790px;
-      }
-
-      @media (min-width: 460px) {
-        height: 850px;
-      }
-
-      @media (min-width: 490px) {
-        height: 900px;
-      }
-
-      @media (min-width: 550px) {
-        background-size: 60% 55%;
-      }
-
-      &-prev,
-      &-next {
+      &-button-container {
         position: absolute;
-        bottom: 1%;
-
-        @media (min-width: 370px) {
-          bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        right: 60px;
+        bottom: 6px;
+        .popular-dishes__swiper-prev,
+        .popular-dishes__swiper-next {   
         }
-
-        @media (min-width: 400px) {
-          bottom: 8%;
-        }
-
-        @media (min-width: 410px) {
-          bottom: 7%;
-        }
-
-        @media (min-width: 415px) {
-          bottom: 11%;
-        }
-
-        @media (min-width: 423px) {
-          bottom: 9.5%;
-        }
-
-        @media (min-width: 445px) {
-          bottom: 8%;
-        }
-
-        @media (min-width: 460px) {
-          bottom: 11%;
-        }
-
-        @media (min-width: 480px) {
-          bottom: 9%;
-        }
-
-        @media (min-width: 490px) {
-          bottom: 12%;
-        }
-
-        @media (min-width: 510px) {
-          bottom: 13%;
-        }
-      }
-
-      &-next {
-        right: 17%;
-      }
-
-      &-prev {
-        right: 35%;
       }
 
       &-pagination {
         pointer-events: none;
         z-index: 1;
         position: absolute;
-        top: 380px;
+        top: 370px;
         right: 6%;
-
-        @media (min-width: 335px) {
-          top: 385px;
-        }
-
-        @media (min-width: 342px) {
-          top: 365px;
-        }
-
-        @media (min-width: 355px) {
-          top: 375px;
-        }
-
-        @media (min-width: 370px) {
-          top: 380px;
-        }
-
-        @media (min-width: 435px) {
-          top: 365px;
-        }
-
-        @media (min-width: 500px) {
-          top: 380px;
-        }
-
         img {
           width: 100px;
-
-          @media (min-width: 380px) {
-            height: 350px;
-          }
-
-          @media (min-width: 400px) {
-            height: 370px;
-          }
-
-          @media (min-width: 460px) {
-            height: 410px;
-          }
         }
-
         .dots {
           position: absolute;
           top: 0;
           width: 100%;
-
           div {
             position: relative;
             width: 5px;
@@ -312,111 +204,33 @@
             border-radius: 30px;
             transition: 0.2s;
           }
-
           .active {
             width: 8px;
             height: 8px;
           }
-
           .dot1 {
             top: 40px;
-            left: 52px;
-
-            @media (min-width: 380px) {
-              left: 49px;
-            }
-
-            @media (min-width: 400px) {
-              left: 47px;
-            }
-
-            @media (min-width: 460px) {
-              left: 44px;
-            }
+            left: 52px;           
           }
-
           .dot2 {
             top: 80px;
             left: 79px;
-
-            @media (min-width: 380px) {
-              left: 78px;
-            }
-
-            @media (min-width: 400px) {
-              left: 76px;
-            }
-
-            @media (min-width: 460px) {
-              left: 72px;
-            }
           }
-
           .dot3 {
             top: 125px;
             left: 94px;
-
-            @media (min-width: 400px) {
-              left: 91px;
-            }
-
-            @media (min-width: 460px) {
-              left: 88px;
-            }
           }
-
           .dot4 {
             top: 190px;
             left: 94px;
-
-            @media (min-width: 380px) {
-              left: 95px;
-            }
-
-            @media (min-width: 400px) {
-              left: 96px;
-            }
-
-            @media (min-width: 460px) {
-              left: 97px;
-            }
           }
-
           .dot5 {
             top: 240px;
             left: 76px;
-
-            @media (min-width: 380px) {
-              left: 81px;
-            }
-
-            @media (min-width: 400px) {
-              left: 86px;
-            }
-
-            @media (min-width: 460px) {
-              top: 250px;
-              left: 91px;
-            }
           }
-
           .dot6 {
             top: 275px;
             left: 50px;
-
-            @media (min-width: 380px) {
-              left: 60px;
-            }
-
-            @media (min-width: 400px) {
-              top: 285px;
-              left: 65px;
-            }
-
-            @media (min-width: 460px) {
-              top: 300px;
-              left: 74px;
-            }
           }
         }
       }
@@ -428,22 +242,7 @@
           padding: 10px 0 0 0;
 
           img {
-            width: 100%;
-
-            @media (min-width: 500px) {
-              width: 514px;
-              height: 504px;
-            }
-
-            @media (min-width: 520px) {
-              position: relative;
-              right: -5%;
-            }
-
-            @media (min-width: 570px) {
-              position: relative;
-              right: -8%;
-            }
+            width: 320px;
           }
 
           .content-wrapper {
@@ -451,6 +250,8 @@
             box-shadow: 0px 3px 40px rgba(0, 0, 0, 0.11);
             border-radius: 0 30px 30px 30px;
             padding: 36px 0 28px 0;
+            height: 200px;
+            box-sizing: border-box;
 
             .content-inner {
               margin: 0 0 0 36px;
