@@ -603,7 +603,7 @@
             align-items: center;
 
             .food-img {
-              width: 173px;
+              width: 142px;
               z-index: 2;
               margin: auto;
               position: absolute;
@@ -612,15 +612,15 @@
               right: 0;
 
               @media (min-width:500px) {
-                width: 180px;
+                width: 164px;
               }
 
               @media (min-width:650px) {
-                width: 190px;
+                width: 171px;
               }
 
               @media (min-width:993px) {
-                width: 210px;
+                width: 190px;
               }
             }
 
@@ -663,9 +663,9 @@
               }
 
               & p {
-                margin-top: 17px;
+                margin-top: 10px;
                 font-size: rem(12);
-                width: 173px;
+                width: 139px;
               }
 
               @media (min-width:650px) {
