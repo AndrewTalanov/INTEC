@@ -152,6 +152,7 @@
   .popular-dishes {
     width: 100%;
     box-sizing: border-box;
+
     &__title {
       h2 {
         line-height: 29px;
@@ -173,13 +174,16 @@
       margin: 60px 0 0 0;
       width: 100%;
       background: right top / 70% 55% url("@img/content/BG.png") no-repeat;
+
       // ОРАНЖЕВЫЙ БЭКГРАУНД
       @media (min-width: 425px) {
         background: right top / 60% 58% url("@img/content/BG.png") no-repeat;
       }
+
       @media (min-width: 550px) {
         background: right top / 55% 65% url("@img/content/BG.png") no-repeat;
       }
+
       @media (min-width: 768px) {
         background: right top / 35% 80% url("@img/content/BG.png") no-repeat;
         padding: 0 0 40px 0;
@@ -193,10 +197,12 @@
         gap: 15px;
         left: 50%;
         bottom: 6px;
+
         // КНОПКИ СЛАЙДЕРА
         @media (min-width: 375px) {
           left: 60%;
         }
+
         @media (min-width: 768px) {
           left: 40%;
           bottom: 20px;
@@ -209,29 +215,36 @@
         position: absolute;
         bottom: 260px;
         left: 63%;
+
         // ПАГИНАЦИЯ
         @media (min-width: 425px) {
           left: 67%;
           bottom: 285px;
         }
+
         @media (min-width: 550px) {
           left: 68%;
           bottom: 290px;
         }
+
         @media (min-width: 768px) {
           left: 80%;
           bottom: 160px;
         }
+
         img {
           width: 100px;
+
           @media (min-width: 550px) {
             width: 130px;
           }
         }
+
         .dots {
           position: absolute;
           top: 0;
           width: 100%;
+
           div {
             position: relative;
             width: 5px;
@@ -239,66 +252,81 @@
             background-color: $white;
             border-radius: 30px;
             transition: 0.2s;
+
             @media (min-width: 550px) {
               width: 8px;
               height: 8px;
-            } 
+            }
           }
+
           .active {
             width: 9px;
             height: 9px;
+
             @media (min-width: 550px) {
               width: 12px;
               height: 12px;
-            }  
+            }
           }
+
           .dot1 {
             top: 40px;
             left: 52px;
+
             @media (min-width: 550px) {
               top: 40px;
               left: 55px;
-            }         
+            }
           }
+
           .dot2 {
             top: 80px;
             left: 79px;
+
             @media (min-width: 550px) {
               top: 95px;
               left: 100px;
-            }  
+            }
           }
+
           .dot3 {
             top: 125px;
             left: 94px;
+
             @media (min-width: 550px) {
               top: 180px;
               left: 124px;
-            }  
+            }
           }
+
           .dot4 {
             top: 190px;
             left: 94px;
+
             @media (min-width: 550px) {
               top: 260px;
               left: 117px;
-            } 
+            }
           }
+
           .dot5 {
             top: 240px;
             left: 76px;
+
             @media (min-width: 550px) {
               top: 320px;
               left: 90px;
-            } 
+            }
           }
+
           .dot6 {
             top: 275px;
             left: 50px;
+
             @media (min-width: 550px) {
               top: 360px;
               left: 53px;
-            } 
+            }
           }
         }
       }
@@ -311,19 +339,23 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+
           img {
             // КАРТИНКА
             width: 250px;
             height: 250px;
             margin: 25px 0 45px 0;
+
             @media (min-width: 425px) {
               width: 300px;
               height: 300px;
             }
+
             @media (min-width: 550px) {
               width: 400px;
               height: 400px;
             }
+
             @media (min-width: 768px) {
               align-self: flex-end;
               margin: 45px 8% 95px 0;
@@ -339,9 +371,11 @@
             padding: 36px 0 28px 0;
             height: 200px;
             box-sizing: border-box;
+
             @media (min-width: 550px) {
               padding: 36px 20px 28px 20px;
             }
+
             @media (min-width: 768px) {
               position: absolute;
               bottom: -30px;
@@ -403,9 +437,7 @@
 .section-menu-dishes {
   margin-top: 23%;
 
-  @media (min-width: 420px) {
-    margin-top: 0;
-  }
+ 
   @media (min-width: 768px) {
     margin-top: 100px;
   }
@@ -423,13 +455,19 @@
       margin-top: 22px;
       overflow: hidden;
       position: relative;
-
+      width: 100%;
       .slider-menu {
         &__wrapper {
+          
           &__item {
+            
             .dishes-tab-nav {
+              @media (min-width: 1200px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
 
-              // display: flex;
               .tab-underline {
                 display: none;
               }
