@@ -146,26 +146,32 @@
 .section-popular-dishes {
   position: relative;
   padding: 55px 0 0 0;
-  display: flex;
-  flex-direction: column;
+
 
   .popular-dishes {
     width: 100%;
     box-sizing: border-box;
-    &__title {
-      h2 {
-        line-height: 29px;
-
-        @media (min-width: 768px) {
-          line-height: normal;
-          font-size: rem(40);
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 900px) {
+      flex-direction: unset;
+    }
+    &-content {
+      &__title {
+        h2 {
+          line-height: 29px;
+  
+          @media (min-width: 768px) {
+            line-height: normal;
+            font-size: rem(40);
+          }
         }
       }
-    }
-
-    &__description {
-      margin: 15px 0 26px 0;
-      max-width: 458px;
+  
+      &__description {
+        margin: 15px 0 26px 0;
+        max-width: 458px;
+      }
     }
 
     &__swiper {
@@ -180,8 +186,8 @@
       @media (min-width: 550px) {
         background: right top / 55% 65% url("@img/content/BG.png") no-repeat;
       }
-      @media (min-width: 768px) {
-        background: right top / 35% 80% url("@img/content/BG.png") no-repeat;
+      @media (min-width: 900px) {
+        background: right top / 55% 80% url("@img/content/BG.png") no-repeat;
         padding: 0 0 40px 0;
       }
 
@@ -218,7 +224,7 @@
           left: 68%;
           bottom: 290px;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 900px) {
           left: 80%;
           bottom: 160px;
         }
@@ -324,9 +330,9 @@
               width: 400px;
               height: 400px;
             }
-            @media (min-width: 768px) {
+            @media (min-width: 900px) {
               align-self: flex-end;
-              margin: 45px 8% 95px 0;
+              margin: 45px 15% 95px 0;
 
             }
           }
@@ -342,10 +348,10 @@
             @media (min-width: 550px) {
               padding: 36px 20px 28px 20px;
             }
-            @media (min-width: 768px) {
+            @media (min-width: 900px) {
               position: absolute;
-              bottom: -30px;
-              left: 20%;
+              bottom: 30px;
+              left: 5%;
               background-color: #fff;
               padding: 27px 0px 0px 0px;
               height: 221px;
