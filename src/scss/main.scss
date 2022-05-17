@@ -146,27 +146,34 @@
 .section-popular-dishes {
   position: relative;
   padding: 55px 0 0 0;
-  display: flex;
-  flex-direction: column;
+
 
   .popular-dishes {
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 
-    &__title {
-      h2 {
-        line-height: 29px;
-
-        @media (min-width: 768px) {
-          line-height: normal;
-          font-size: rem(40);
-        }
-      }
+    @media (min-width: 900px) {
+      flex-direction: unset;
     }
 
-    &__description {
-      margin: 15px 0 26px 0;
-      max-width: 458px;
+    &-content {
+      &__title {
+        h2 {
+          line-height: 29px;
+
+          @media (min-width: 768px) {
+            line-height: normal;
+            font-size: rem(40);
+          }
+        }
+      }
+
+      &__description {
+        margin: 15px 0 26px 0;
+        max-width: 458px;
+      }
     }
 
     &__swiper {
@@ -184,8 +191,8 @@
         background: right top / 55% 65% url("@img/content/BG.png") no-repeat;
       }
 
-      @media (min-width: 768px) {
-        background: right top / 35% 80% url("@img/content/BG.png") no-repeat;
+      @media (min-width: 900px) {
+        background: right top / 55% 80% url("@img/content/BG.png") no-repeat;
         padding: 0 0 40px 0;
       }
 
@@ -227,7 +234,7 @@
           bottom: 290px;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 900px) {
           left: 80%;
           bottom: 160px;
         }
@@ -356,9 +363,9 @@
               height: 400px;
             }
 
-            @media (min-width: 768px) {
+            @media (min-width: 900px) {
               align-self: flex-end;
-              margin: 45px 8% 95px 0;
+              margin: 45px 15% 95px 0;
 
             }
           }
@@ -376,10 +383,10 @@
               padding: 36px 20px 28px 20px;
             }
 
-            @media (min-width: 768px) {
+            @media (min-width: 900px) {
               position: absolute;
-              bottom: -30px;
-              left: 20%;
+              bottom: 30px;
+              left: 5%;
               background-color: #fff;
               padding: 27px 0px 0px 0px;
               height: 221px;
@@ -437,7 +444,7 @@
 .section-menu-dishes {
   margin-top: 23%;
 
- 
+
   @media (min-width: 768px) {
     margin-top: 100px;
   }
@@ -456,11 +463,12 @@
       overflow: hidden;
       position: relative;
       width: 100%;
+
       .slider-menu {
         &__wrapper {
-          
+
           &__item {
-            
+
             .dishes-tab-nav {
               @media (min-width: 1200px) {
                 display: flex;
