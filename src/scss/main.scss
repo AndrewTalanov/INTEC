@@ -256,7 +256,7 @@
         pointer-events: none;
         z-index: 1;
         position: absolute;
-        top: 380px;
+        top: 370px;
         right: 6%;
 
         @media (min-width: 335px) {
@@ -1404,7 +1404,7 @@
   background: rgba($color: #000000, $alpha: 0.28);
 
   .calculator {
-    padding: 70px 0 50px 0;
+    padding: 30px 0 50px 0;
     max-width: 551px;
 
     @media (min-width: 768px) {
