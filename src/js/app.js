@@ -100,9 +100,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
         slidesPerView: 2.3,
       },
 
-    }
+      // '1200': {
+      //   spaceBetween: 20,
+      //   slidesPerView: 4,
+      //   watchOverflow: true,
+      //   init: false,
+      //   simulateTouch: false,
+      //   grabCursor: false,
+      //   centeredSlides: false,
+      // },
 
+    }
   });
+
+  // function Tabs() {
+  //   let bindAll = function () {
+  //     let menuElements = document.querySelectorAll('[data-tab]');
+  //     for (let i = 0; i < menuElements.length; i++) {
+  //       menuElements[i].addEventListener('click', change, false);
+  //     }
+  //   }
+
+  //   let clear = function () {
+  //     let menuElements = document.querySelectorAll('[data-tab]');
+  //     for (let i = 0; i < menuElements.length; i++) {
+  //       menuElements[i].classList.remove('active');
+  //       let id = menuElements[i].getAttribute('data-tab');
+  //       document.getElementById(id).classList.remove('active');
+  //     }
+  //   }
+
+  //   let change = function (e) {
+  //     clear();
+  //     e.target.classList.add('active');
+  //     let id = e.currentTarget.getAttribute('data-tab');
+  //     document.getElementById(id).classList.add('active');
+  //   }
+  //   bindAll();
+  // }
+
+  // let connectTabs = new Tabs();
+
+
 
   menuDishesSwiper.on('transitionStart', function (e) {
 
@@ -167,7 +206,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         slidesPerView: 2,
       },
       '768': {
-        slidesPerView: 2.1,
+        slidesPerView: 2.5,
+      },
+      '993': {
+        slidesPerView: 2.8,
       },
     }
   });
@@ -227,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       document.getElementsByTagName("header")[0].classList.add(className);
     } else {
       document.getElementsByTagName("header")[0].classList.remove(className);
-    }  
+    }
   };
 
 });

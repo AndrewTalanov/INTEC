@@ -61,11 +61,15 @@
 
                 & form {
                     position: relative;
-                    width: 97.4%;
+                    width: 93.4%;
 
                     @media (min-width: 768px) {
-                        width: 94.4%;
+                        width: 94.3%;
                     }
+                    @media (min-width: 1200px) {
+                        width: 95.5%;
+                    }
+
 
                 }
 
