@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       item.classList.remove('active');
     });
     slide.classList.add('active');
+
   });
   //-------------------------Слайдер и табы разеала "Меню"-------------------------//
 
@@ -100,46 +101,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
         slidesPerView: 2.3,
       },
 
-      // '1200': {
-      //   spaceBetween: 20,
-      //   slidesPerView: 4,
-      //   watchOverflow: true,
-      //   init: false,
-      //   simulateTouch: false,
-      //   grabCursor: false,
-      //   centeredSlides: false,
-      // },
-
+      '1200': {
+        spaceBetween: 20,
+        slidesPerView: 4,
+        watchOverflow: true,
+        init: false,
+        simulateTouch: false,
+        grabCursor: false,
+        centeredSlides: false,
+      },
     }
   });
 
-  // function Tabs() {
-  //   let bindAll = function () {
-  //     let menuElements = document.querySelectorAll('[data-tab]');
-  //     for (let i = 0; i < menuElements.length; i++) {
-  //       menuElements[i].addEventListener('click', change, false);
-  //     }
-  //   }
 
-  //   let clear = function () {
-  //     let menuElements = document.querySelectorAll('[data-tab]');
-  //     for (let i = 0; i < menuElements.length; i++) {
-  //       menuElements[i].classList.remove('active');
-  //       let id = menuElements[i].getAttribute('data-tab');
-  //       document.getElementById(id).classList.remove('active');
-  //     }
-  //   }
+  function tabClick() {
+    let menuDishes = document.querySelectorAll(".tab-click");
+    let tabPanes = document.querySelectorAll(".sliders-item");
 
-  //   let change = function (e) {
-  //     clear();
-  //     e.target.classList.add('active');
-  //     let id = e.currentTarget.getAttribute('data-tab');
-  //     document.getElementById(id).classList.add('active');
-  //   }
-  //   bindAll();
-  // }
+    menuDishes.forEach(function (item) {
+      item.addEventListener("click", function () {
+        
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute("data-tab");
 
-  // let connectTabs = new Tabs();
+        let currentTab = document.querySelector(tabId);
+
+        if (!currentBtn.classList.contains('active')) {
+          menuDishes.forEach(function (item) {
+            item.classList.remove('active');
+          });
+
+          tabPanes.forEach(function (item) {
+            item.classList.remove('active');
+          });
+
+          currentBtn.classList.add('active');
+          currentTab.classList.add('active');
+        }
+
+      });
+    });
+  }
+  tabClick();
+
 
 
 
@@ -214,8 +218,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
-  menuDishesSwiper.on('transitionEnd', function () {
 
+
+  menuDishesSwiper.on('transitionEnd', function () {
     let slidersDishes = document.querySelectorAll(".sliders-item");
 
     let index = menuDishesSwiper.realIndex;
@@ -226,6 +231,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     slidersDishes[index].style.display = "block";
   });
+
 
 
   // popup
