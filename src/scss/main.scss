@@ -152,12 +152,15 @@
   @media (min-width: 900px) {
     padding-top: 0;
   }
+
   @media (min-width: 1200px) {
     background: right top / 30% 100% url("@img/content/BG1.png") no-repeat;
   }
+
   @media (min-width: 1350px) {
-      padding-right: 100px;
+    padding-right: 100px;
   }
+
   @media (min-width: 1650px) {
     padding-right: 250px;
   }
@@ -171,25 +174,30 @@
     @media (min-width: 900px) {
       flex-direction: unset;
     }
+
     // ТУТ
     @media (min-width: 1200px) {
       position: relative;
       margin: 0 0 0 auto;
       max-width: 1200px;
     }
+
     // @media (min-width: 1350px) {
     //   padding-right: 100px;
     // }
-    
+
 
     &-content {
+
       // Контент
       @media (min-width: 900px) {
         margin-top: 100px;
       }
+
       @media (min-width: 1200px) {
         margin-top: 270px;
       }
+
       // @media (min-width: 1100px) {
       //   width: 400px;
       // }
@@ -215,6 +223,7 @@
       margin: 60px 0 0 0;
       width: 100%;
       background: right top / 70% 55% url("@img/content/BG.png") no-repeat;
+
       @media (min-width: 900px) {
         margin-top: 0;
       }
@@ -232,13 +241,16 @@
         background: right top / 55% 80% url("@img/content/BG1.png") no-repeat;
         padding: 0 0 40px 0;
       }
+
       @media (min-width: 900px) {
         background: right top / 55% 80% url("@img/content/BG1.png") no-repeat;
         padding: 0 0 40px 0;
       }
+
       @media (min-width: 960px) {
         background: right top / 45% 80% url("@img/content/BG1.png") no-repeat;
       }
+
       @media (min-width: 1200px) {
         background: none;
         padding-top: 125px;
@@ -263,49 +275,62 @@
           left: 40%;
           bottom: 20px;
         }
+
         @media (min-width: 900px) {
           left: 60%;
           bottom: 40px;
         }
+
         @media (min-width: 940px) {
           left: 55%;
         }
+
         @media (min-width: 1000px) {
           left: 58%;
         }
+
         @media (min-width: 1090px) {
           left: 55%;
         }
+
         @media (min-width: 1200px) {
           left: 55%;
           bottom: 9%;
         }
+
         @media (min-width: 1230px) {
           left: 57%;
         }
+
         @media (min-width: 1330px) {
           left: 59.5%;
         }
+
         @media (min-width: 1350px) {
           left: 55%;
         }
+
         @media (min-width: 1480px) {
           left: 57%;
         }
+
         @media (min-width: 1600px) {
           left: 61%;
         }
+
         @media (min-width: 1650px) {
           left: 53%;
         }
+
         @media (min-width: 1750px) {
           left: 56%;
         }
+
         @media (min-width: 1870px) {
           left: 58%;
         }
-        
-        
+
+
       }
 
       &-pagination {
@@ -330,16 +355,20 @@
           left: 80%;
           bottom: 160px;
         }
+
         @media (min-width: 1200px) {
           left: 85%;
           bottom: 210px;
         }
+
         @media (min-width: 1350px) {
           left: 83%;
         }
+
         @media (min-width: 1650px) {
           left: 77%;
         }
+
         @media (min-width: 1900px) {
           left: 80%;
         }
@@ -445,7 +474,7 @@
 
       .swiper-wrapper {
         padding: 0 0 30px 0;
-        
+
 
         .swiper-slide {
           padding: 10px 0 0 0;
@@ -473,6 +502,7 @@
               align-self: flex-end;
               margin: 45px 15% 95px 0;
             }
+
             @media (min-width: 1200px) {
               width: 500px;
               height: 500px;
@@ -501,9 +531,11 @@
               height: 221px;
               width: 307px;
             }
+
             @media (min-width: 1000px) {
               left: 15%;
             }
+
             @media (min-width: 1200px) {
               left: 2%;
               bottom: 10%;
@@ -823,6 +855,28 @@
       }
     }
   }
+
+  .all-menu {
+    &__container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 45px;
+
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      @media (min-width: 1200px) {
+        margin-top: 81px;
+        justify-content: flex-end;
+      }
+    }
+  }
 }
 
 .section-about-company {
@@ -1115,7 +1169,8 @@
             visibility: hidden;
           }
 
-          &:hover, &:active {
+          &:hover,
+          &:active {
             height: 264px;
             background-color: $orange;
             transition: 0.7s;
