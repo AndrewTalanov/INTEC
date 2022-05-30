@@ -21,6 +21,7 @@ html {
 
 html,
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -176,4 +177,8 @@ input:focus {
 body {
   background:
     0 100% / 100% 1159px url("@img/content/final-back.png") no-repeat;
+  @media (min-width: 1700px) {
+    background:
+      0 100% / 100% 1159px url("@img/content/bg-bottom.png") no-repeat;
+  }
 }
