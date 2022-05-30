@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       '1200': {
         spaceBetween: 20,
         slidesPerView: 4,
-        watchOverflow: true,
+        watchOverflow: false,
         init: false,
         simulateTouch: false,
         grabCursor: false,
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     menuDishes.forEach(function (item) {
       item.addEventListener("click", function () {
-        
+
         let currentBtn = item;
         let tabId = currentBtn.getAttribute("data-tab");
 
@@ -142,8 +142,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     });
   }
-  tabClick();
 
+  if (document.documentElement.clientWidth > 1199) {
+    tabClick();
+  }
 
 
 
