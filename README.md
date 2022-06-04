@@ -6,4 +6,4 @@
 
 Ссылка на макет: https://www.figma.com/file/En6BLtZsH5h7YXlxRt0TiV/FoodILike
 
-Ссылка на сайт: food-like.ru
+Ссылка на сайт: https://andrewbavyka.github.io/FOOD-LIKE-Intec
